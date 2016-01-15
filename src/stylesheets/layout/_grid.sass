@@ -1,0 +1,17 @@
+/* ------------------------------------
+    Grid
+ ------------------------------------*/
+
+.wrap
+    margin: 0 auto
+    max-width: 90%
+    @extend %clearfix
+
+    @include mq($break-medium)
+        @include container
+
+%clearfix
+    &:after
+        content: ''
+        display: table
+        clear: both

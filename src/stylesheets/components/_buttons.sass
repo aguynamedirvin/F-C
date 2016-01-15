@@ -1,0 +1,56 @@
+/* ------------------------------------
+    Buttons
+ ------------------------------------*/
+ 
+.btn
+    background: $dark
+    border: 2px solid $dark
+    color: #fff
+    cursor: pointer
+    font:
+        family: 'Raleway', sans-serif
+        size: 2rem
+        weight: 300
+    letter-spacing: 3px
+    margin: $spacing 0
+    padding: 1.5rem 0
+    position: relative
+    text:
+        align: center
+        transform: uppercase
+    transition: .3s
+    width: 100%
+
+    &:hover, &:focus
+        //box-shadow: inset 0px 0px 0px 3px darken($dark, 20)
+        background: none
+        color: $dark
+
+    @include mq($break-medium)
+        width: 30rem
+
+    // Line
+    &--line
+        background: none
+        color: $dark
+
+        &:hover, &:focus
+            background: $dark
+            color: #fff
+
+    // Accent filled
+    &--accent
+        background: $primary
+        border-color: $primary
+
+        &:hover, &:focus
+            color: $primary
+
+    &--accent-line
+        background: none
+        border-color: $primary
+        color: $primary
+            
+        &:hover, &:focus
+            background: $primary
+            color: #fff
