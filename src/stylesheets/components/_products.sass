@@ -23,11 +23,28 @@
         &:nth-child(3n)
             @include last
                 
-    &__image
-        transition: .3s
+    &__preview
+        overflow: hidden
+        position: relative
+        
+        img
+            transition: .3s
             
-        &:hover
-            opacity: .8
+            &:hover
+                opacity: .8
+            
+        .quick-view
+            background: #fff
+            bottom: -100%
+            color: $dark
+            display: block
+            padding: $spacing
+            position: absolute
+            transition: .3s
+            width: 100%
+            
+            .product:hover &
+                bottom: 0
             
     &__desc
         margin-top: $spacing
@@ -61,3 +78,87 @@
 
     &--sale
         color: $primary
+
+
+
+
+
+
+$product-card-height: 500px
+    
+.product-card
+    background: #fff
+    box-shadow: 0 0px 10px rgba(#000, 0.5)
+    left: 0
+    margin: 0 auto
+    max-height: 90vh
+    max-width: 900px
+    overflow: scroll
+    padding: ($spacing * 2)
+    position: fixed
+    right: 0
+    top: calc(50vh - (90vh / 2))
+    width: 90%
+    z-index: 5
+    //display: none
+
+    @include mq($break-medium)
+        top: calc(50vh - (#{$product-card-height} / 2))
+
+    &__close
+        display: none
+
+        @include mq($break-medium)
+            background: #000
+            display: inline-block
+            height: 12px
+            position: absolute
+            right: $spacing
+            top: $spacing
+            width: 12px
+
+    // Product image slider
+    .product__slider
+        
+        @include mq($break-medium)
+            @include span(7)
+        
+        .product__thumbnails
+            margin: $spacing 0
+
+            @include mq($break-medium)
+                @include span(3)
+                margin: 0
+            
+            .thumbnail
+                background: rgba(#000, .1)
+                height: 75px
+                @include span(3)
+
+                @include mq($break-medium)
+                    width: 100%
+                    height: 100px
+                    margin-bottom: $spacing
+        
+        .product__image
+            @include mq($break-medium)
+                @include span(9 last)
+    
+                
+    // Product details
+    .product__details
+        
+        @include mq($break-medium)
+            @include span(5 last)
+
+        h3
+            font-size: 1.8rem
+            margin-bottom: ($spacing / 2)
+
+        p
+            margin: 0
+
+        
+    .product__options
+        border-bottom: 1px solid $light-grey
+        padding: ($spacing * 2) 0

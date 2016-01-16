@@ -24,37 +24,31 @@
         &:hover
             color: #fff
 
+    &__widget
+        margin-bottom: ($spacing * 2)
 
-.site-info
-    font-size: 1.4rem
-    
-    @include mq($break-medium)
-        font-size: 1.2rem
-        @include span(4)
+        @include mq($break-medium)
+                display: inline-block
+                float: left
+                margin-left: gutter()
 
-
-.footer-widgets
-    margin-bottom: ($spacing * 4)
-
-    @include mq($break-medium)
-        margin: 0
-        @include last
+        h4
+            font-size: 1.8rem
+            margin: 0 0 $spacing
 
 
-.footer__widget
-    margin-bottom: ($spacing * 2)
-    
-    @include mq($break-medium)
-        display: inline-block
-        float: left
-        margin-left: gutter()
-
-    h4
-        font-size: 1.8rem
-        margin: 0 0 $spacing
-
-    &.links
+    &__links
         @include mq($break-medium)
             li
                 display: inline-block
                 margin-right: $spacing
+
+
+.site-info
+    font-size: 1.4rem
+    float: right
+    
+    @include mq($break-medium)
+        float: left
+        font-size: 1.2rem
+        @include span(4)

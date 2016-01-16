@@ -20,6 +20,10 @@ $shadow-zindex: 2
 $main-zindex: 1
 
 
+$header-height: 50px
+$header-height-desktop: 70px
+
+
 @mixin center($xy:xy) 
     @if $xy == xy 
         left: 50%
@@ -57,7 +61,7 @@ main
 header 
     background: rgba($header-bg, .97)
     box-shadow: 0 1px 0 rgba(#000, .1)
-    height: 50px
+    height: $header-height
     left: 0
     position: fixed
     text-align: center
@@ -67,7 +71,7 @@ header
     z-index: $header-zindex
 
     @include mq($break-medium) 
-        height: 80px
+        height: $header-height-desktop
 
     a
         text-decoration: none
@@ -134,7 +138,7 @@ header
     width: 260px
     z-index: $sidebar-zindex
 
-    @include mq($break-medium) 
+    @include mq($break-small) 
         width: 350px
     
     @include mq($break-medium) 
@@ -158,12 +162,11 @@ header
         height: auto
         left: auto
         padding-top: 0
-        position: absolute
+        //position: absolute
         right: 8em
         top: 0
         width: auto
-        /* header height */
-        line-height: 80px 
+        line-height: $header-height-desktop  // header height
         z-index: $header-zindex
 
     &.speed-in 
@@ -236,12 +239,6 @@ header
 
     &.speed-in 
         right: 0
-    
-    /*> * 
-        padding: 0 1em
-
-        @include mq($break-medium)
-            padding: 0 2em*/
 
     h2 
         font-size: 1.4rem
@@ -308,7 +305,7 @@ header
         display: inline-block
         margin: 0 auto
 
-    /*.checkout-btn
+    //.checkout-btn
         display: block
         width: 100%
         height: 60px
@@ -318,7 +315,7 @@ header
         text-align: center
 
         .no-touch &:hover 
-            background: lighten($green, 10%)*/
+            background: lighten($green, 10%)
 
     .go-to-cart 
         text-align: center
