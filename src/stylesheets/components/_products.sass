@@ -1,18 +1,88 @@
 /* ------------------------------------
-     Products
+     Product
  ------------------------------------*/
 
-.products
-    @include nested(12)
-        
 .product
+    @include nested(12)
+
+    // Preview
+    &__preview
+        @include span(12)
+
+        @include mq($break-medium)
+            @include span(6.5)
+
+        .image
+            margin-bottom: $spacing
+
+            @include mq($break-medium)
+                @include span(9.5 last)
+
+        .thumbnails
+            @include mq($break-medium)
+                @include span(2.5)
+
+        .thumbnail
+            height: 125px
+            background: $light-grey
+            //@include gallery(1 of 3 .1)
+
+            @include mq($break-medium)
+                height: 125px
+                width: 100%
+                margin-bottom: $spacing
+
+
+    // Details
+    &__details
+        @include mq($break-medium)
+            @include span(5 last)
+
+    &__price
+        font-size: 3.6rem
+
+    &__options
+        margin: ($spacing * 2) 0
+
+        .btn
+            width: 100%
+
+    &__select
+
+        .select
+            margin: 0
+            width: 100%
+
+        @include mq($break-medium)
+            &-size
+                @include span(8)
+
+            &-qty
+                @include span(4 last)
+
+    &__info
+        border-top: 1px solid $light-grey
+        padding: ($spacing * 3) 0
+
+        h3
+            font-size: 1.8rem
+            margin: 0
+
+
+/* ------------------------------------
+    Product Items
+ ------------------------------------*/
+.product__list
+    @include nested(12)
+
+.product-item
     margin-bottom: gutter()
     text-align: center
     
     // For small screens
     @include mq($break-small, $break-medium)
         @include span(6)
-        
+
         &:nth-child(2n)
             @include last
         
@@ -33,22 +103,23 @@
             &:hover
                 opacity: .8
             
+    .quick-view
+        background: #fff
+        bottom: -100%
+        color: $dark
+        display: block
+        padding: $spacing
+        position: absolute
+        transition: .3s
+        width: 100%
+        
+    &:hover
         .quick-view
-            background: #fff
-            bottom: -100%
-            color: $dark
-            display: block
-            padding: $spacing
-            position: absolute
-            transition: .3s
-            width: 100%
-            
-            .product:hover &
-                bottom: 0
-            
+            bottom: 0
+
     &__desc
         margin-top: $spacing
-            
+
     &__title
         font-size: 1.8rem
         margin: 0 0 ($spacing / 2)
@@ -66,29 +137,22 @@
             transition: .3s
             width: ($spacing * 3)
             
-        .product:hover &:after
+        .product-item:hover &:after
             width: ($spacing * 5)
 
 
-// Prices
-.price
-    &--crossed
-        color: $medium-grey
-        text-decoration: line-through
-
-    &--sale
-        color: $primary
 
 
-
-
-
+/* ------------------------------------
+    Product Card
+ ------------------------------------*/
 
 $product-card-height: 500px
     
 .product-card
     background: #fff
     box-shadow: 0 0px 10px rgba(#000, 0.5)
+    display: none
     left: 0
     margin: 0 auto
     max-height: 90vh
@@ -99,8 +163,7 @@ $product-card-height: 500px
     right: 0
     top: calc(50vh - (90vh / 2))
     width: 90%
-    z-index: 5
-    //display: none
+    z-index: $product-card-zindex
 
     @include mq($break-medium)
         top: calc(50vh - (#{$product-card-height} / 2))
@@ -109,56 +172,33 @@ $product-card-height: 500px
         display: none
 
         @include mq($break-medium)
-            background: #000
+            background: url(../images/close.svg) no-repeat center center // #000
             display: inline-block
-            height: 12px
+            height: 15px
             position: absolute
             right: $spacing
             top: $spacing
-            width: 12px
+            width: 15px
+            transition: .3s
+            cursor: pointer
 
-    // Product image slider
-    .product__slider
-        
-        @include mq($break-medium)
-            @include span(7)
-        
-        .product__thumbnails
-            margin: $spacing 0
+            &:hover
+                opacity: .8
 
-            @include mq($break-medium)
-                @include span(3)
-                margin: 0
-            
-            .thumbnail
-                background: rgba(#000, .1)
-                height: 75px
-                @include span(3)
 
-                @include mq($break-medium)
-                    width: 100%
-                    height: 100px
-                    margin-bottom: $spacing
-        
-        .product__image
-            @include mq($break-medium)
-                @include span(9 last)
-    
-                
-    // Product details
-    .product__details
-        
-        @include mq($break-medium)
-            @include span(5 last)
-
-        h3
-            font-size: 1.8rem
-            margin-bottom: ($spacing / 2)
-
-        p
-            margin: 0
-
-        
-    .product__options
-        border-bottom: 1px solid $light-grey
-        padding: ($spacing * 2) 0
+// Product Structure
+//.product
+//    .product__preview
+//        .preview
+//
+//        .thumbnails
+//            .thumbnail
+//
+//    .product__details
+//        .product__title
+//        
+//        .product__price
+//            .price--crossed
+//            .price--sale
+//        
+//        .product__info

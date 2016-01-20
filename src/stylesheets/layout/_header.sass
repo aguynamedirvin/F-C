@@ -2,27 +2,15 @@
     Header
  ------------------------------------*/
 
-// colors
-
 $main-text: #31353d // main text
-$link: #435779 // anchor tags
-$header-bg: #fff
-
 $light-text: #a5aebc
-$green: #7dcf85
-
 $shadow-layer-bg: rgba(#435779, .6)
 
-// z-index
-$header-zindex: 4
-$sidebar-zindex: 3
-$shadow-zindex: 2
-$main-zindex: 1
+$header-bg: #fff
+$header-link: #435779
 
-
-$header-height: 50px
-$header-height-desktop: 70px
-
+$header-height: 5rem
+$header-height-desktop: 7rem
 
 @mixin center($xy:xy) 
     @if $xy == xy 
@@ -41,7 +29,6 @@ $header-height-desktop: 70px
         top: 50%
         bottom: auto
         transform: translateY(-50%)
-  
 
 
 .img-replace
@@ -52,10 +39,10 @@ $header-height-desktop: 70px
 
 
 main
-    padding-top: 50px
+    padding-top: $header-height + $spacing
 
     @include mq($break-medium)
-        padding-top: 80px
+        padding-top: $header-height-desktop * 2
 
 
 header 
@@ -76,25 +63,14 @@ header
     a
         text-decoration: none
 
-
-#logo 
-    padding-top: 5px
-    transform: scale(0.8)
-
-    @include mq($break-small) 
-        padding-top: 20px
-        position: absolute
-        /* logo left margin on Dekstop */
-        left: 2.4em 
-        top: 0
-        transform: scale(1)
-
-
 #hamburger-menu, 
 #cart-trigger 
     height: 100%
     position: absolute
     top: 0
+
+    @include mq($break-medium) 
+        position: static
 
     a 
         height: 100%
@@ -112,20 +88,6 @@ header
         background: darken($header-bg, 5%) url('../images/hamburger-menu.svg') no-repeat center center
 
 
-// Cart Menu Trigger Icon
-#cart-trigger 
-    right: 0
-
-    a 
-        background: darken($header-bg, 5%) url('../images/cart.svg') no-repeat center center
-
-        @include mq($break-medium)
-            background-color: darken($header-bg, 5%)
-            border-left: none
-            position: relative
-            width: 100px
-
-
 #main-nav, 
 #cart 
     -webkit-overflow-scrolling: touch
@@ -135,11 +97,11 @@ header
     padding-top: 50px  // Header height
     position: fixed
     top: 0
-    width: 260px
+    width: 220px
     z-index: $sidebar-zindex
 
     @include mq($break-small) 
-        width: 350px
+        width: 300px
     
     @include mq($break-medium) 
         width: 30%
@@ -160,10 +122,9 @@ header
         background: transparent
         box-shadow: none
         height: auto
-        left: auto
         padding-top: 0
-        //position: absolute
-        right: 8em
+        position: static
+        float: left
         top: 0
         width: auto
         line-height: $header-height-desktop  // header height
@@ -182,12 +143,12 @@ header
                 margin-left: 1em
 
                 /*&.current 
-                    background: $link
+                    background: $header-link
                     box-shadow: none
                     color: #FFF*/
                 
                 .no-touch &:hover 
-                    background: $link
+                    background: $header-link
                     color: #FFF
 
         a 
@@ -232,6 +193,25 @@ header
 /* ------------------------------------
     Slide-Out Cart
  ------------------------------------*/
+
+// Cart Menu Trigger Icon
+#cart-trigger 
+    right: 0
+
+    @include mq($break-medium)
+        float: right
+        height: $header-height-desktop
+        display: inline-block
+
+    a 
+        background: darken($header-bg, 5%) url('../images/cart.svg') no-repeat center center
+
+        @include mq($break-medium)
+            background-color: darken($header-bg, 5%)
+            border-left: none
+            //position: relative
+            width: 100px
+
 #cart 
     background: #FFF
     right: -100%
@@ -304,18 +284,7 @@ header
     .checkout-btn
         display: inline-block
         margin: 0 auto
-
-    //.checkout-btn
-        display: block
         width: 100%
-        height: 60px
-        line-height: 60px
-        background: $green
-        color: #FFF
-        text-align: center
-
-        .no-touch &:hover 
-            background: lighten($green, 10%)
 
     .go-to-cart 
         text-align: center
@@ -323,5 +292,26 @@ header
 
         a 
             text-decoration: underline
-        
-    
+
+
+#logo
+    transform: scale(0.8)
+    line-height: $header-height
+
+    @include mq($break-medium)
+        display: inline-block
+        float: left
+        line-height: $header-height-desktop
+        width: 100px
+
+//#logo 
+    //padding-top: 5px
+    transform: scale(0.8)
+
+    @include mq($break-small) 
+        //padding-top: 20px
+        position: absolute
+        left: 2.4em // logo left margin on Dekstop
+        top: 0
+        transform: scale(1)
+        line-height: $header-height-desktop*/

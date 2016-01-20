@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
     
     // if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
-    var $L = 1200,
+    var $L = 868,
         $menu_navigation = $('#main-nav'),
         $cart_trigger = $('#cart-trigger'),
         $hamburger_icon = $('#hamburger-menu'),
@@ -74,11 +74,14 @@ function toggle_panel_visibility ($lateral_panel, $background_layer, $body) {
 }
 
 function move_navigation( $navigation, $MQ) {
+
     if ( $(window).width() >= $MQ ) {
         $navigation.detach();
-        $navigation.appendTo('header');
+        //$navigation.appendTo('header');
+        $navigation.insertAfter('header > .wrap > .logo');
     } else {
         $navigation.detach();
         $navigation.insertAfter('header');
     }
+
 }

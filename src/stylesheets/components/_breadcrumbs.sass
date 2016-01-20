@@ -1,0 +1,26 @@
+/* ------------------------------------
+    Breadcrumbs
+ ------------------------------------*/
+
+.breadcrumb
+    margin-bottom: $spacing
+
+    li
+        display: inline-block
+        font-style: italic
+        list-style: none
+
+        a
+            color: $medium-grey
+            text-decoration: none
+
+            &:hover
+                color: $dark
+
+        &:after
+            color: $medium-grey
+            content: '>'
+            margin: 0 1rem
+
+        &:last-of-type:after
+            content: ''
