@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* ------------------------------------
     Reset v.0.1
  ------------------------------------*/
@@ -78,26 +79,6 @@ p {
   font-size: 1.6rem;
 }
 
-h0 {
-  font-size: 1;
-}
-
-h1 {
-  font-size: 1.25;
-}
-
-h2 {
-  font-size: 1.5625;
-}
-
-h3 {
-  font-size: 1.953125;
-}
-
-h4 {
-  font-size: 2.44140625;
-}
-
 h1,
 h2,
 h3,
@@ -169,16 +150,6 @@ h5 {
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
-}
-
-main {
-  padding-top: 6.5rem;
-}
-
-@media screen and (min-width: 868px) {
-  main {
-    padding-top: 14rem;
-  }
 }
 
 header {
@@ -580,7 +551,252 @@ header a {
   margin-top: 1.5rem;
 }
 
-.btn, .select {
+/** Slider **/
+#main-slider,
+.slide-container,
+.slide {
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-size: cover;
+}
+
+.slide-content {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+@media screen and (min-width: 868px) {
+  .slide-content .slide-meta {
+    margin: 0 auto;
+    max-width: 700px;
+  }
+}
+
+.slide-content .title {
+  color: #FFF;
+  font-size: 7rem;
+}
+
+@media screen and (max-width: 868px) {
+  .slide-content .title {
+    text-shadow: 1px 1px 5px #000;
+  }
+}
+
+.slide-content .summary {
+  color: #FFF;
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 868px) {
+  .slide-content .summary {
+    text-shadow: 1px 1px 5px #000;
+  }
+}
+
+.slide-content .btn {
+  margin: 15px;
+}
+
+/** Slider Navigation **/
+ul.slick-dots {
+  bottom: 10px;
+  display: block;
+  list-style: none;
+  padding: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+ul.slick-dots li {
+  cursor: pointer;
+  display: inline-block;
+  height: 20px;
+  margin: 0 5px;
+  padding: 0;
+  position: relative;
+  width: 20px;
+}
+
+ul.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+ul.slick-dots li button {
+  background: transparent;
+  border: 0;
+  color: transparent;
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  height: 20px;
+  line-height: 0;
+  outline: none;
+  padding: 5px;
+  width: 20px;
+}
+
+ul.slick-dots li button:hover, ul.slick-dots li button:focus {
+  outline: none;
+}
+
+ul.slick-dots li button:hover:before, ul.slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+ul.slick-dots li button:before {
+  color: white;
+  content: '•';
+  font-size: 35px;
+  height: 20px;
+  left: 0;
+  line-height: 20px;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 20px;
+}
+
+/** Slick Navigation Arrows **/
+.slick-prev,
+.slick-next {
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-family: FontAwesome;
+  font-size: 60px;
+  height: 60px;
+  line-height: 1;
+  opacity: 1;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  transition: opacity .25s ease-in-out;
+}
+
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  opacity: .5;
+}
+
+.slick-next {
+  right: 0;
+  content: '\f105';
+}
+
+.slick-prev {
+  left: 0;
+  content: '\f104';
+}
+
+/** Slick Slider default styles **/
+.slick-slider {
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  touch-action: pan-y;
+  -ms-touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.slick-list {
+  display: block;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  display: block;
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
+.slick-track:before {
+  content: '';
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  border: 1px solid transparent;
+  display: block;
+  height: auto;
+}
+
+input[type='text'],
+input[type='password'] {
   text-transform: uppercase;
   letter-spacing: 3px;
   display: inline-block;
@@ -598,9 +814,16 @@ header a {
 }
 
 @media screen and (min-width: 380px) {
-  .btn, .select {
+  input[type='text'],
+  input[type='password'] {
     width: 30rem;
   }
+}
+
+input[type='text'],
+input[type='password'] {
+  text-transform: none;
+  padding: 0 1.5rem;
 }
 
 /* ------------------------------------
@@ -610,10 +833,28 @@ header a {
   background: #3B3B3B;
   border: 1px solid #3B3B3B;
   color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  height: 5.3rem;
+  letter-spacing: 3px;
   line-height: 1;
+  margin: 1.5rem 0;
   padding: 1.85rem;
+  position: relative;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
+  transition: .3s;
+  width: 100%;
+}
+
+@media screen and (min-width: 868px) {
+  .btn {
+    width: 30rem;
+  }
 }
 
 .btn:hover, .btn:focus {
@@ -663,9 +904,26 @@ header a {
 
 .select {
   color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  height: 5.3rem;
+  margin: 1.5rem 0;
+  width: 100%;
+  position: relative;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 868px) {
+  .select {
+    width: 30rem;
+  }
 }
 
 .select-styled {
+  background: #fff;
+  border: 1px solid #3B3B3B;
   bottom: 0;
   left: 0;
   line-height: 5.3rem;
@@ -990,6 +1248,28 @@ header a {
 
 .breadcrumb li:last-of-type:after {
   content: '';
+}
+
+.featured-slider,
+.slide {
+  height: 600px;
+}
+
+.featured-slider {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.featured-slider .slide-content {
+  position: relative;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.featured-slider .slide-content h1 {
+  color: #fff !important;
 }
 
 .heart {

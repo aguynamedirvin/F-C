@@ -158,7 +158,7 @@ module.exports = function (grunt) {
                     // Mobile.js       // Example: script1.mobile.js & script2.mobile.js -> mobile.min.js
                     {
                         dest: '<%= dirs.dist.js %>/mobile.min.js',
-                        src: '<%= dirs.src.js %>/*.mobile.js'
+                        src: '<%= dirs.src.js %>/mobile/*.js'
                     },
 
                     // Vendor          // Minified & stored separately

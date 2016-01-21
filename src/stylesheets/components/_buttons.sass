@@ -1,10 +1,10 @@
 /* ------------------------------------
     Buttons
  ------------------------------------*/
- 
+
 .btn
     background: $dark
-    border: 2px solid $dark
+    border: $input-border-width solid $dark
     color: #fff
     cursor: pointer
     display: inline-block
@@ -12,9 +12,11 @@
         family: 'Raleway', sans-serif
         size: 1.6rem
         weight: 300
+    height: $input-height
     letter-spacing: 3px
+    line-height: 1
     margin: $spacing 0
-    padding: 1.9rem 0
+    padding: ($input-height - 1.6rem) / 2
     position: relative
     text:
         align: center
@@ -22,15 +24,15 @@
         transform: uppercase
     transition: .3s
     width: 100%
-
-    &:hover, &:focus
-        //box-shadow: inset 0px 0px 0px 3px darken($dark, 20)
-        background: none
-        color: $dark
-        outline: 0
+    //padding: 1.5rem 0
 
     @include mq($break-medium)
         width: 30rem
+
+    &:hover, &:focus
+        background: none
+        color: $dark
+        outline: 0
 
     // Line
     &--line
@@ -49,6 +51,7 @@
         &:hover, &:focus
             color: $primary
 
+    // Accent line
     &--accent-line
         background: none
         border-color: $primary

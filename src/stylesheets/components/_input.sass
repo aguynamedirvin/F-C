@@ -1,0 +1,27 @@
+%input-defaults
+    text-transform: uppercase
+    letter-spacing: 3px
+    display: inline-block
+    height: $input-height
+    margin: $spacing 0
+    width: 100%
+    transition: .3s
+    font: 
+        family: $heading-family
+        size: 1.6rem
+        weight: 300
+    cursor: pointer
+    outline: 0
+    position: relative
+
+    border: $input-border-width solid $dark
+
+    @include mq($break-small)
+        width: 30rem
+
+
+input[type='text'],
+input[type='password']
+    @extend %input-defaults
+    text-transform: none
+    padding: 0 $spacing
