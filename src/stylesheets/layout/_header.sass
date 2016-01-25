@@ -2,11 +2,11 @@
     Header
  ------------------------------------*/
 
-$main-text: #31353d // main text
+$main-text: #fff //#31353d // main text
 $light-text: #a5aebc
 $shadow-layer-bg: rgba(#435779, .6)
 
-$header-bg: #fff
+$header-bg: $dark //#fff
 $header-link: #435779
 
 $header-height: 5rem
@@ -82,7 +82,8 @@ header
 
 
 #main-nav, 
-#cart 
+#cart
+    background: $header-bg
     -webkit-overflow-scrolling: touch
     box-shadow: 0 0 15px rgba(#000, .2)
     height: 100%
@@ -105,7 +106,7 @@ header
     Navigation
  ------------------------------------*/
 #main-nav 
-    background: #FFF
+    //background: #FFF
     left: -100%
     transition: left 0.3s
     text-transform: uppercase
@@ -145,18 +146,17 @@ header
                     color: #FFF
 
         a 
-            border-bottom: 1px solid $light-grey
+            border-bottom: 1px solid $medium-grey
             display: block
             height: 60px
             line-height: 60px
             padding: 0 1em
             text-decoration: none
-            color: $dark
+            color: $main-text
 
             @include mq($break-medium)
                 //@include border-radius
                 border-bottom: none
-                color: $dark
                 display: inline-block
                 height: auto
                 line-height: 1
@@ -205,8 +205,8 @@ header
             //position: relative
             width: 100px
 
-#cart 
-    background: #FFF
+#cart
+    color: #fff
     right: -100%
     transition: right 0.3s
 
@@ -225,7 +225,7 @@ header
         padding: 0
 
         li 
-            border-top: 1px solid $light-grey
+            border-top: 1px solid $medium-grey
             padding: 1em
             position: relative
 
@@ -234,7 +234,7 @@ header
 
 
             &:last-child 
-                border-bottom: 1px solid $light-grey
+                border-bottom: 1px solid $medium-grey
 
     .qty, 
     .price 
@@ -288,6 +288,7 @@ header
 
 
 #logo
+    color: $main-text
     transform: scale(0.8)
     line-height: $header-height
 
@@ -296,15 +297,4 @@ header
         float: left
         line-height: $header-height-desktop
         width: 100px
-
-//#logo 
-    //padding-top: 5px
-    transform: scale(0.8)
-
-    @include mq($break-small) 
-        //padding-top: 20px
-        position: absolute
-        left: 2.4em // logo left margin on Dekstop
-        top: 0
         transform: scale(1)
-        line-height: $header-height-desktop*/
