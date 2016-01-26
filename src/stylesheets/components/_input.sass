@@ -1,11 +1,16 @@
+/* ------------------------------------
+    Form Inputs
+ ------------------------------------*/
+
 %input-defaults
     text-transform: uppercase
-    letter-spacing: 3px
+    letter-spacing: 1px
     display: inline-block
     height: $input-height
     margin: $spacing 0
     width: 100%
     transition: .3s
+    padding: ($input-height - 1.6rem) / 2
     font: 
         family: $heading-family
         size: 1.6rem
@@ -14,14 +19,23 @@
     outline: 0
     position: relative
 
-    border: $input-border-width solid $dark
+    border: $input-border-width solid $color-mine-shaft
 
     @include mq($break-small)
         width: 30rem
 
 
 input[type='text'],
-input[type='password']
+input[type='password'],
+textarea
     @extend %input-defaults
     text-transform: none
-    padding: 0 $spacing
+    
+textarea
+    min-height: 30rem
+    display: block
+
+input:disabled,
+textarea:disabled
+    background-color: $color-alto
+    border-color: $color-grey

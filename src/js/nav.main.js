@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
     
     // if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
     var $L = 868,
-        $menu_navigation = $('#main-nav'),
+        $menu_navigation = $('#site-nav'),
         $cart_trigger = $('#cart-trigger'),
         $hamburger_icon = $('#hamburger-menu'),
         $lateral_cart = $('#cart'),
@@ -41,8 +41,8 @@ jQuery(document).ready(function($){
         }
     });
 
-    // move #main-navigation inside header on laptop
-    // insert #main-navigation after header on mobile
+    // move #site-navigation inside header on laptop
+    // insert #site-navigation after header on mobile
     move_navigation( $menu_navigation, $L);
     $(window).on('resize', function(){
         move_navigation( $menu_navigation, $L);

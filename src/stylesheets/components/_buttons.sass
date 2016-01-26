@@ -3,40 +3,28 @@
  ------------------------------------*/
 
 .btn
-    background: $dark
-    border: $input-border-width solid $dark
+    @extend %input-defaults
+    background: $color-mine-shaft
     color: #fff
-    cursor: pointer
-    display: inline-block
-    font:
-        family: 'Raleway', sans-serif
-        size: 1.6rem
-        weight: 300
-    height: $input-height
     letter-spacing: 3px
     line-height: 1
-    margin: $spacing 0
-    padding: ($input-height - 1.6rem) / 2
-    position: relative
     text:
         align: center
         decoration: none
         transform: uppercase
-    transition: .3s
     width: 100%
-    //padding: 1.5rem 0
 
     @include mq($break-medium)
         width: 30rem
 
     &:hover, &:focus
         background: none
-        color: $dark
+        color: $color-mine-shaft
         outline: 0
         
     // Light
     &--light
-        color: $dark
+        color: $color-mine-shaft
         background: #fff
         border-color: #fff
         
@@ -49,26 +37,26 @@
     // Line
     &--line
         background: none
-        color: $dark
+        color: $color-mine-shaft
 
         &:hover, &:focus
-            background: $dark
+            background: $color-mine-shaft
             color: #fff
 
     // Accent filled
     &--accent
-        background: $primary
-        border-color: $primary
+        background: $color-primary
+        border-color: $color-primary
 
         &:hover, &:focus
-            color: $primary
+            color: $color-primary
 
     // Accent line
     &--accent-line
         background: none
-        border-color: $primary
-        color: $primary
+        border-color: $color-primary
+        color: $color-primary
             
         &:hover, &:focus
-            background: $primary
+            background: $color-primary
             color: #fff

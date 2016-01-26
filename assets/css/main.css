@@ -146,6 +146,10 @@ h5 {
 /* ------------------------------------
     Header
  ------------------------------------*/
+main {
+  padding-top: 14rem;
+}
+
 .img-replace {
   display: inline-block;
   overflow: hidden;
@@ -173,7 +177,25 @@ header {
 }
 
 header a {
+  color: #fff;
   text-decoration: none;
+}
+
+/* Logo */
+#logo {
+  color: #fff;
+  transform: scale(0.8);
+  line-height: 5rem;
+}
+
+@media screen and (min-width: 868px) {
+  #logo {
+    display: inline-block;
+    float: left;
+    line-height: 7rem;
+    width: 100px;
+    transform: scale(1);
+  }
 }
 
 #hamburger-menu,
@@ -210,128 +232,6 @@ header a {
   background: #2e2e2e url("../images/hamburger-menu.svg") no-repeat center center;
 }
 
-#main-nav,
-#cart {
-  background: #3B3B3B;
-  -webkit-overflow-scrolling: touch;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  height: 100%;
-  overflow-y: auto;
-  padding-top: 50px;
-  position: fixed;
-  top: 0;
-  width: 220px;
-  z-index: 3;
-}
-
-@media screen and (min-width: 380px) {
-  #main-nav,
-  #cart {
-    width: 300px;
-  }
-}
-
-@media screen and (min-width: 868px) {
-  #main-nav,
-  #cart {
-    width: 30%;
-    padding-top: 80px;
-  }
-}
-
-/* ------------------------------------
-    Navigation
- ------------------------------------*/
-#main-nav {
-  left: -100%;
-  transition: left 0.3s;
-  text-transform: uppercase;
-  font-family: "Raleway", sans-serif;
-}
-
-@media screen and (min-width: 868px) {
-  #main-nav {
-    background: transparent;
-    box-shadow: none;
-    height: auto;
-    padding-top: 0;
-    position: static;
-    float: left;
-    top: 0;
-    width: auto;
-    line-height: 7rem;
-    z-index: 4;
-  }
-}
-
-#main-nav.speed-in {
-  left: 0;
-}
-
-.no-js #main-nav {
-  position: fixed;
-}
-
-@media screen and (min-width: 868px) {
-  #main-nav ul li {
-    display: inline-block;
-    margin-left: 1em;
-    /*&.current
-                    background: $header-link
-                    box-shadow: none
-                    color: #FFF*/
-  }
-  .no-touch #main-nav ul li:hover {
-    background: #435779;
-    color: #FFF;
-  }
-}
-
-#main-nav ul a {
-  border-bottom: 1px solid #7F7F7F;
-  display: block;
-  height: 60px;
-  line-height: 60px;
-  padding: 0 1em;
-  text-decoration: none;
-  color: #fff;
-}
-
-@media screen and (min-width: 868px) {
-  #main-nav ul a {
-    border-bottom: none;
-    display: inline-block;
-    height: auto;
-    line-height: 1;
-    padding: 1em 1.4em;
-  }
-  #main-nav ul a:after {
-    content: '';
-    display: block;
-    background: #B14646;
-    height: 1px;
-    width: 0;
-    transition: .3s;
-    margin: 0.75rem auto;
-  }
-  #main-nav ul a:hover:after {
-    width: 3rem;
-  }
-}
-
-#main-nav ul .current {
-  box-shadow: inset 4px 0 #B14646;
-}
-
-@media screen and (min-width: 868px) {
-  #main-nav ul .current {
-    box-shadow: none;
-  }
-}
-
-/* ------------------------------------
-    Slide-Out Cart
- ------------------------------------*/
 #cart-trigger {
   right: 0;
 }
@@ -356,6 +256,128 @@ header a {
   }
 }
 
+/* ------------------------------------
+    Navigation
+ ------------------------------------*/
+#site-nav,
+#cart {
+  background: #3B3B3B;
+  -webkit-overflow-scrolling: touch;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  height: 100%;
+  overflow-y: auto;
+  padding-top: 50px;
+  position: fixed;
+  top: 0;
+  width: 220px;
+  z-index: 3;
+}
+
+@media screen and (min-width: 380px) {
+  #site-nav,
+  #cart {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 868px) {
+  #site-nav,
+  #cart {
+    width: 30%;
+    padding-top: 80px;
+  }
+}
+
+#site-nav {
+  left: -100%;
+  transition: left 0.3s;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+
+@media screen and (min-width: 868px) {
+  #site-nav {
+    background: transparent;
+    box-shadow: none;
+    height: auto;
+    padding-top: 0;
+    position: static;
+    float: left;
+    top: 0;
+    width: auto;
+    line-height: 7rem;
+    z-index: 4;
+  }
+}
+
+#site-nav.speed-in {
+  left: 0;
+}
+
+.no-js #site-nav {
+  position: fixed;
+}
+
+@media screen and (min-width: 868px) {
+  #site-nav ul li {
+    display: inline-block;
+    margin-left: 1em;
+    /*&.current
+                    background: $header-link
+                    box-shadow: none
+                    color: #FFF*/
+  }
+  .no-touch #site-nav ul li:hover {
+    background: #435779;
+    color: #FFF;
+  }
+}
+
+#site-nav ul li a {
+  border-bottom: 1px solid #7F7F7F;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  padding: 0 1em;
+  text-decoration: none;
+  color: #fff;
+}
+
+@media screen and (min-width: 868px) {
+  #site-nav ul li a {
+    border-bottom: none;
+    display: inline-block;
+    height: auto;
+    line-height: 1;
+    padding: 1em 1.4em;
+  }
+  #site-nav ul li a:after {
+    content: '';
+    display: block;
+    background: #B14646;
+    height: 1px;
+    width: 0;
+    transition: .3s;
+    margin: 0.75rem auto;
+  }
+  #site-nav ul li a:hover:after {
+    width: 3rem;
+  }
+}
+
+#site-nav ul .current {
+  box-shadow: inset 4px 0 #B14646;
+}
+
+@media screen and (min-width: 868px) {
+  #site-nav ul .current {
+    box-shadow: none;
+  }
+}
+
+/* ------------------------------------
+    Slide-Out Cart
+ ------------------------------------*/
 #cart {
   color: #fff;
   right: -100%;
@@ -462,22 +484,6 @@ header a {
   text-decoration: underline;
 }
 
-#logo {
-  color: #fff;
-  transform: scale(0.8);
-  line-height: 5rem;
-}
-
-@media screen and (min-width: 868px) {
-  #logo {
-    display: inline-block;
-    float: left;
-    line-height: 7rem;
-    width: 100px;
-    transform: scale(1);
-  }
-}
-
 /* ------------------------------------
     Footer
  ------------------------------------*/
@@ -536,7 +542,6 @@ header a {
 
 .site-info {
   font-size: 1.4rem;
-  float: right;
 }
 
 @media screen and (min-width: 868px) {
@@ -551,6 +556,15 @@ header a {
 
 .site-info .site-note {
   margin-top: 1.5rem;
+}
+
+/* ------------------------------------
+    Sections
+ ------------------------------------*/
+.section__title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 /** Slider **/
@@ -797,15 +811,20 @@ ul.slick-dots li button:before {
   height: auto;
 }
 
+/* ------------------------------------
+    Form Inputs
+ ------------------------------------*/
 input[type='text'],
-input[type='password'] {
+input[type='password'],
+textarea, .btn {
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   display: inline-block;
   height: 5.3rem;
   margin: 1.5rem 0;
   width: 100%;
   transition: .3s;
+  padding: 1.85rem;
   font-family: "Raleway", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
@@ -817,15 +836,27 @@ input[type='password'] {
 
 @media screen and (min-width: 380px) {
   input[type='text'],
-  input[type='password'] {
+  input[type='password'],
+  textarea, .btn {
     width: 30rem;
   }
 }
 
 input[type='text'],
-input[type='password'] {
+input[type='password'],
+textarea {
   text-transform: none;
-  padding: 0 1.5rem;
+}
+
+textarea {
+  min-height: 30rem;
+  display: block;
+}
+
+input:disabled,
+textarea:disabled {
+  background-color: #D8D8D8;
+  border-color: #7F7F7F;
 }
 
 /* ------------------------------------
@@ -833,23 +864,12 @@ input[type='password'] {
  ------------------------------------*/
 .btn {
   background: #3B3B3B;
-  border: 1px solid #3B3B3B;
   color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Raleway', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 300;
-  height: 5.3rem;
   letter-spacing: 3px;
   line-height: 1;
-  margin: 1.5rem 0;
-  padding: 1.85rem;
-  position: relative;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  transition: .3s;
   width: 100%;
 }
 
@@ -1267,15 +1287,9 @@ input[type='password'] {
 /* ------------------------------------
     Homepage
  ------------------------------------*/
+/* Slider */
 .featured-slider {
   text-shadow: 0 0 6px #000;
-}
-
-.featured-slider .slide-content {
-  position: relative;
-  top: 50%;
-  text-align: center;
-  transform: translateY(-50%);
 }
 
 .featured-slider h1 {

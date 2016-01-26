@@ -8,7 +8,7 @@
     visibility: hidden
 
 .select
-    color: $dark
+    color: $color-mine-shaft
     cursor: pointer
     display: inline-block
     font-family: $heading-family
@@ -24,7 +24,7 @@
 
 .select-styled 
     background: #fff
-    border: 1px solid $dark
+    border: 1px solid $color-mine-shaft
     bottom: 0
     left: 0
     line-height: $input-height
@@ -35,7 +35,7 @@
 
     &:after 
         border: .8rem solid transparent
-        border-color: $dark transparent transparent transparent
+        border-color: $color-mine-shaft transparent transparent transparent
         content: ''
         height: 0
         position: absolute
@@ -47,13 +47,13 @@
         border-bottom: 0
 
         &:after
-            border-color: transparent transparent $dark transparent
+            border-color: transparent transparent $color-mine-shaft transparent
             top: (($input-height - .8rem) / 2) - .8rem // Vertically center
 
 
 .select-options 
     background: #fff
-    border: 1px solid $dark
+    border: 1px solid $color-mine-shaft
     border-top: 0
     display: none 
     left: 0
@@ -66,14 +66,14 @@
     z-index: 999
     
     li 
-        border-top: 1px solid $light-grey
+        border-top: 1px solid $color-alto
         margin: 0
         padding: 12px 0
         text-indent: 15px
         transition: all 0.3s ease-in
         
         &:hover 
-            color: $primary
+            color: $color-primary
         
         &[rel="hide"] 
             display: none

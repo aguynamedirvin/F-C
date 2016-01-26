@@ -35,7 +35,10 @@
 
             <div class="wrap">
             
-                <div class="logo" id="logo"><!--<img src="assets/images/logo.svg" alt="Homepage">-->F & C</div>
+                <div class="logo" id="logo">
+                    <!--<img src="assets/images/logo.svg" alt="Homepage">-->
+                    <a href="index.html">F & C</a>
+                </div>
 
                 <div id="hamburger-menu"><a class="img-replace" href="#0">Menu</a></div>
                 <div id="cart-trigger"><a class="img-replace" href="#0">Cart</a></div>
@@ -46,12 +49,12 @@
 
 
         <!-- Site Navigation -->
-        <nav id="main-nav">
+        <nav id="site-nav">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a class="current" href="#">About</a></li>
-                <li><a href="#0">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a class="current" href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
 
@@ -129,8 +132,70 @@
 
 
             <!-- Similar Products -->
-            <div class="similar-products">
-            </div>
+            <section class="section">
+
+                <h2 class="section__title">Related Products</h2>
+
+                <!-- Products -->
+                <ul class="product__list">
+
+                    <li class="product-item">
+                        <div class="product-item__preview">
+                            <a href="product.html">
+                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
+                            </a>
+                            <a class="quick-view" href="#quick-view">Quickview</a>
+                        </div>
+                        <div class="product-item__desc">
+                            <h3 class="product-item__title">
+                            <a href="product.html">Denim Shirt</a>
+                        </h3>
+                            <div class="product-item__price">
+                                <span class="price">$49.99</span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="product-item">
+                        <div class="product-item__preview">
+                            <a href="product.html">
+                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
+                            </a>
+                            <a class="quick-view" href="#quick-view">Quickview</a>
+                        </div>
+                        <div class="product-item__desc">
+                            <h3 class="product-item__title">
+                           <a href="product.html">Denim Shirt</a>
+                        </h3>
+                            <div class="product-item__price">
+                                <span class="price--sale">$19.99</span>
+                                <span class="price--crossed">$49.99</span>
+                            </div>
+                        </div>
+                    </li>
+
+
+                    <li class="product-item">
+                        <div class="product-item__preview">
+                            <a href="#0">
+                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
+                            </a>
+                            <a class="quick-view" href="#quick-view">Quickview</a>
+                        </div>
+                        <div class="product-item__desc">
+                            <h3 class="product-item__title">
+                           <a href="#">Denim Shirt</a>
+                        </h3>
+                            <div class="product-item__price">
+                                <span class="price">$49.99</span>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul><!-- / .products -->
+
+
+            </section><!-- / related products -->
 
 
         </main><!-- / Main Content -->

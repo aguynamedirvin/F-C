@@ -1,0 +1,186 @@
+/* ------------------------------------
+    Navigation
+ ------------------------------------*/
+ 
+ 
+#site-nav, 
+#cart
+    background: $header-bg
+    -webkit-overflow-scrolling: touch
+    box-shadow: 0 0 15px rgba(#000, .2)
+    height: 100%
+    overflow-y: auto
+    padding-top: 50px  // Header height
+    position: fixed
+    top: 0
+    width: 220px
+    z-index: $sidebar-zindex
+
+    @include mq($break-small) 
+        width: 300px
+    
+    @include mq($break-medium) 
+        width: 30%
+        padding-top: 80px  // Header height has changed
+
+ 
+#site-nav
+    left: -100%
+    transition: left 0.3s
+    text-transform: uppercase
+    font-family: $heading-family
+
+    @include mq($break-medium)
+        background: transparent
+        box-shadow: none
+        height: auto
+        padding-top: 0
+        position: static
+        float: left
+        top: 0
+        width: auto
+        line-height: $header-height-desktop  // header height
+        z-index: $header-zindex
+
+    &.speed-in 
+        left: 0
+
+    .no-js & 
+        position: fixed
+    
+    ul 
+        li
+            @include mq($break-medium)
+                display: inline-block
+                margin-left: 1em
+
+                /*&.current 
+                    background: $header-link
+                    box-shadow: none
+                    color: #FFF*/
+                
+                .no-touch &:hover 
+                    background: $header-link
+                    color: #FFF
+
+            a 
+                border-bottom: 1px solid $color-grey
+                display: block
+                height: 60px
+                line-height: 60px
+                padding: 0 1em
+                text-decoration: none
+                color: $main-text
+    
+                @include mq($break-medium)
+                    //@include border-radius
+                    border-bottom: none
+                    display: inline-block
+                    height: auto
+                    line-height: 1
+                    padding: 1em 1.4em
+    
+                    &:after
+                        content: ''
+                        display: block
+                        background: $color-primary
+                        height: 1px
+                        width: 0
+                        transition: .3s
+                        margin: ($spacing / 2) auto
+    
+                    &:hover:after
+                        width: ($spacing * 2)
+
+        // Current page
+        .current 
+            box-shadow: inset 4px 0 $color-primary
+
+            @include mq($break-medium)
+                box-shadow: none
+
+
+/* ------------------------------------
+    Slide-Out Cart
+ ------------------------------------*/
+
+#cart
+    color: #fff
+    right: -100%
+    transition: right 0.3s
+
+    &.speed-in 
+        right: 0
+
+    h2 
+        font-size: 1.4rem
+        font-weight: bold
+        margin: 1em 0
+        text-transform: uppercase
+        padding: 0em 2em
+
+
+    .cart-items 
+        padding: 0
+
+        li 
+            border-top: 1px solid $color-grey
+            padding: 1em
+            position: relative
+
+            @include mq($break-medium)
+                padding: 1em 2em 
+
+
+            &:last-child 
+                border-bottom: 1px solid $color-grey
+
+    .qty, 
+    .price 
+        color: $light-text
+    
+    .price 
+        margin-top: .4em
+    
+    .item-remove 
+        @include center(y) // see mixin inside partials > _mixins.scss
+        background: url('../images/remove-item.svg') no-repeat center center
+        border-radius: 50%
+        height: 32px
+        position: absolute
+        right: 1em
+        width: 32px
+
+        @include mq($break-medium)
+            right: 2em
+
+        .no-touch &:hover 
+            background-color: $color-alto
+
+    .cart-total 
+        padding-bottom: 1em
+        padding-top: 1em
+        padding: 2em 1em
+
+        @include mq($break-medium)
+            padding: 0 2em
+
+        span 
+            float: right
+
+        &:after  /* clearfix */
+            content: ''
+            display: table
+            clear: both
+    
+    .checkout-btn
+        display: inline-block
+        margin: 0 auto
+        width: 100%
+
+    .go-to-cart 
+        text-align: center
+        margin: 1em 0
+
+        a 
+            text-decoration: underline
