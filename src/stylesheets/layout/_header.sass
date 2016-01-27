@@ -66,7 +66,7 @@ header
         text-decoration: none
        
        
-/* Logo */ 
+/** Logo **/ 
 #logo
     color: $main-text
     transform: scale(0.8)
@@ -80,6 +80,7 @@ header
         transform: scale(1)
 
 
+/** Navigation Menu **/
 #hamburger-menu, 
 #cart-trigger 
     height: 100%
@@ -94,11 +95,11 @@ header
         width: 60px
 
 
-// Hamburger Menu Trigger Icon
+/** Hamburger Menu **/
 #hamburger-menu
     display: block
     left: 1.5rem
-    width: 40px
+    width: 35px
     overflow: hidden
     white-space: nowrap
     color: transparent // Hide Text
@@ -111,7 +112,6 @@ header
         height: 1px
         width: 100%
         top: 50%
-        margin-top: -1px
         left: 0
         background-color: #fff
         transition: background-color 0.15s 0.15s
@@ -129,7 +129,7 @@ header
             transform: translateZ(0)
             backface-visibility: hidden
             
-            transition: transform 0.15s 0.15s
+            transition: transform 0.2s
 
         &:before
             transform: translateY(-10px)
@@ -147,7 +147,7 @@ header
             transform: translateY(0) rotate(45deg)
 
 
-// Cart Menu Trigger Icon
+/** Cart Menu Icon Trigger **/
 #cart-trigger 
     right: 0
 
@@ -162,5 +162,4 @@ header
         @include mq($break-medium)
             background-color: darken($header-bg, 5%)
             border-left: none
-            //position: relative
             width: 100px

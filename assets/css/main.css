@@ -187,7 +187,7 @@ header a {
   text-decoration: none;
 }
 
-/* Logo */
+/** Logo **/
 #logo {
   color: #fff;
   transform: scale(0.8);
@@ -204,6 +204,7 @@ header a {
   }
 }
 
+/** Navigation Menu **/
 #hamburger-menu,
 #cart-trigger {
   height: 100%;
@@ -224,10 +225,11 @@ header a {
   width: 60px;
 }
 
+/** Hamburger Menu **/
 #hamburger-menu {
   display: block;
   left: 1.5rem;
-  width: 40px;
+  width: 35px;
   overflow: hidden;
   white-space: nowrap;
   color: transparent;
@@ -244,7 +246,6 @@ header a {
   height: 1px;
   width: 100%;
   top: 50%;
-  margin-top: -1px;
   left: 0;
   background-color: #fff;
   transition: background-color 0.15s 0.15s;
@@ -259,7 +260,7 @@ header a {
   background-color: #fff;
   transform: translateZ(0);
   backface-visibility: hidden;
-  transition: transform 0.15s 0.15s;
+  transition: transform 0.2s;
 }
 
 #hamburger-menu span:before {
@@ -282,6 +283,7 @@ header a {
   transform: translateY(0) rotate(45deg);
 }
 
+/** Cart Menu Icon Trigger **/
 #cart-trigger {
   right: 0;
 }
@@ -1266,7 +1268,8 @@ textarea:disabled {
   margin: 0 auto;
   max-height: 90vh;
   max-width: 900px;
-  overflow: scroll;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   padding: 3rem;
   position: fixed;
   right: 0;
@@ -1277,6 +1280,7 @@ textarea:disabled {
 
 @media screen and (min-width: 868px) {
   .product-card {
+    overflow: auto;
     top: calc(50vh - (500px / 2));
   }
 }
