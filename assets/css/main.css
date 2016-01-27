@@ -137,7 +137,7 @@ h5 {
   }
 }
 
-.wrap:after {
+.wrap:after, .product:after {
   content: '';
   display: table;
   clear: both;
@@ -146,8 +146,14 @@ h5 {
 /* ------------------------------------
     Header
  ------------------------------------*/
-main {
-  padding-top: 14rem;
+body {
+  padding-top: 5rem;
+}
+
+@media screen and (min-width: 868px) {
+  body {
+    padding-top: 7rem;
+  }
 }
 
 .img-replace {
@@ -219,7 +225,12 @@ header a {
 }
 
 #hamburger-menu {
-  left: 0;
+  display: block;
+  left: 1.5rem;
+  width: 40px;
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
 }
 
 @media screen and (min-width: 868px) {
@@ -228,8 +239,47 @@ header a {
   }
 }
 
-#hamburger-menu a {
-  background: #2e2e2e url("../images/hamburger-menu.svg") no-repeat center center;
+#hamburger-menu span {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  background-color: #fff;
+  transition: background-color 0.15s 0.15s;
+}
+
+#hamburger-menu span:before, #hamburger-menu span:after {
+  content: '';
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition: transform 0.15s 0.15s;
+}
+
+#hamburger-menu span:before {
+  transform: translateY(-10px);
+}
+
+#hamburger-menu span:after {
+  transform: translateY(10px);
+}
+
+#hamburger-menu.open span {
+  background: rgba(255, 255, 255, 0);
+}
+
+#hamburger-menu.open span:before {
+  transform: translateY(0) rotate(-45deg);
+}
+
+#hamburger-menu.open span:after {
+  transform: translateY(0) rotate(45deg);
 }
 
 #cart-trigger {
@@ -490,9 +540,9 @@ header a {
 .site-footer {
   background: #2F2F2F;
   color: #fff;
+  font-size: 1.8rem;
   padding: 3rem;
   text-align: center;
-  font-size: 1.8rem;
 }
 
 @media screen and (min-width: 868px) {
@@ -547,7 +597,6 @@ header a {
 @media screen and (min-width: 868px) {
   .site-info {
     float: left;
-    font-size: 1.2rem;
     width: 31.1827956989%;
     float: left;
     margin-right: 3.2258064516%;
@@ -817,21 +866,22 @@ ul.slick-dots li button:before {
 input[type='text'],
 input[type='password'],
 textarea, .btn {
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  border: 1px solid #3B3B3B;
+  border-radius: 0;
+  cursor: pointer;
   display: inline-block;
   height: 5.3rem;
+  letter-spacing: 1px;
   margin: 1.5rem 0;
-  width: 100%;
-  transition: .3s;
+  outline: 0;
   padding: 1.85rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: .3s;
+  width: 100%;
   font-family: "Raleway", sans-serif;
   font-size: 1.6rem;
   font-weight: 300;
-  cursor: pointer;
-  outline: 0;
-  position: relative;
-  border: 1px solid #3B3B3B;
 }
 
 @media screen and (min-width: 380px) {
@@ -1285,6 +1335,50 @@ textarea:disabled {
 }
 
 /* ------------------------------------
+    Social Icons
+ ------------------------------------*/
+.social-icons li {
+  display: inline-block;
+  padding-right: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.social-icons .fa {
+  font-size: 2.2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons .fa:hover, .social-icons .fa:active {
+  transform: scale(1.1);
+}
+
+.social-icons .fa-facebook {
+  background-color: #3C599F;
+}
+
+.social-icons .fa-twitter {
+  background-color: #55acee;
+}
+
+.social-icons .fa-pinterest {
+  background-color: #bd081c;
+}
+
+.social-icons .fa-instagram {
+  background-color: #3f729b;
+}
+
+.social-icons .fa-google-plus {
+  background-color: #dc4e41;
+}
+
+/* ------------------------------------
     Homepage
  ------------------------------------*/
 /* Slider */
@@ -1310,12 +1404,12 @@ textarea:disabled {
 }
 
 .heart:before {
-  color: #DC0D0D;
+  color: #B14646;
   content: "\f004";
   font-family: "FontAwesome";
   left: 0;
   position: absolute;
-  top: -2px;
+  top: -1px;
 }
 
 .logo {

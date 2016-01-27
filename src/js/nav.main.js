@@ -11,15 +11,21 @@ jQuery(document).ready(function($){
     // open lateral menu on mobile
     $hamburger_icon.on('click', function(event){
         event.preventDefault();
-        //close cart panel (if it's open)
+        
+        // close cart panel (if it's open)
         $lateral_cart.removeClass('speed-in');
         toggle_panel_visibility($menu_navigation, $shadow_layer, $('body'));
+
+        // show hamburger icon
+        $(this).toggleClass('open');
+
     });
 
     // open cart
     $cart_trigger.on('click', function(event){
         event.preventDefault();
-        //close lateral menu (if it's open)
+        
+        // close lateral menu (if it's open)
         $menu_navigation.removeClass('speed-in');
         toggle_panel_visibility($lateral_cart, $shadow_layer, $('body'));
     });
@@ -27,6 +33,7 @@ jQuery(document).ready(function($){
     // close lateral cart or lateral menu
     $shadow_layer.on('click', function(){
         $shadow_layer.removeClass('is-visible');
+        
         // firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
         if( $lateral_cart.hasClass('speed-in') ) {
             $lateral_cart.removeClass('speed-in').on('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){

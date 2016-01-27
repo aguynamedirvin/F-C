@@ -3,23 +3,23 @@
  ------------------------------------*/
 
 %input-defaults
-    text-transform: uppercase
-    letter-spacing: 1px
+    border: $input-border-width solid $color-mine-shaft
+    border-radius: 0
+    cursor: pointer
     display: inline-block
     height: $input-height
+    letter-spacing: 1px
     margin: $spacing 0
-    width: 100%
-    transition: .3s
+    outline: 0
     padding: ($input-height - 1.6rem) / 2
+    position: relative
+    text-transform: uppercase
+    transition: .3s
+    width: 100%
     font: 
         family: $heading-family
         size: 1.6rem
         weight: 300
-    cursor: pointer
-    outline: 0
-    position: relative
-
-    border: $input-border-width solid $color-mine-shaft
 
     @include mq($break-small)
         width: 30rem
