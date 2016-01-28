@@ -3,7 +3,6 @@
  ------------------------------------*/
 
 $main-text: #fff // main text
-$light-text: #a5aebc
 
 $header-bg: $color-mine-shaft
 $header-link: #435779
@@ -48,14 +47,13 @@ body
 
 header 
     background: rgba($header-bg, .97)
-    box-shadow: 0 1px 0 rgba(#000, .1)
+    font-family: $heading-family
     height: $header-height
     left: 0
     position: fixed
     text-align: center
     top: 0
     width: 100%
-    font-family: $heading-family
     z-index: $header-zindex
 
     @include mq($break-medium) 
@@ -92,38 +90,37 @@ header
 
     a 
         height: 100%
-        width: 60px
 
 
 /** Hamburger Menu **/
 #hamburger-menu
+    color: transparent // Hide Text
     display: block
-    left: 1.5rem
-    width: 35px
+    left: $spacing
     overflow: hidden
     white-space: nowrap
-    color: transparent // Hide Text
+    width: 35px
 
     @media screen and (min-width: $break-medium)
         display: none
 
     span
-        position: absolute
-        height: 1px
-        width: 100%
-        top: 50%
-        left: 0
         background-color: #fff
-        transition: background-color 0.15s 0.15s
+        height: 1px
+        left: 0
+        position: absolute
+        top: 50%
+        transition: background-color 0.15s
+        width: 100%
 
         &:before, 
         &:after
+            background-color: #fff
             content: ''
+            height: 100%
             left: 0
             position: absolute
             width: 100%
-            height: 100%
-            background-color: #fff
             
             // Force Hardware Acceleration
             transform: translateZ(0)
@@ -138,7 +135,8 @@ header
             transform: translateY(10px)
 
     &.open span
-        background: rgba(255, 255, 255, 0)
+        background-color: $header-bg // for browsers that don't support rgba
+        background-color: rgba(255, 255, 255, 0)
 
         &:before
             transform: translateY(0) rotate(-45deg)
@@ -152,9 +150,9 @@ header
     right: 0
 
     @include mq($break-medium)
+        display: inline-block
         float: right
         height: $header-height-desktop
-        display: inline-block
 
     a 
         background: darken($header-bg, 5%) url('../images/cart.svg') no-repeat center center
