@@ -409,7 +409,7 @@ header a {
     background: #B14646;
     height: 1px;
     width: 0;
-    transition: .3s;
+    transition: width .3s;
     margin: 0.75rem auto;
   }
   #site-nav ul li a:hover:after {
@@ -616,6 +616,36 @@ header a {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
+}
+
+.news-letter {
+  padding: 6rem;
+  background: #3B3B3B;
+}
+
+.news-letter .section__title {
+  color: #fff;
+}
+
+.news-letter__container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.news-letter input {
+  margin: 0;
+}
+
+@media screen and (min-width: 868px) {
+  .news-letter .btn {
+    top: 2px;
+    height: 5.1rem;
+    left: -5px;
+    width: 31.1827956989%;
+  }
+  .news-letter input[type='text'] {
+    width: 65.5913978495%;
+  }
 }
 
 /** Slider **/
@@ -1073,6 +1103,10 @@ textarea:disabled {
 /* ------------------------------------
      Product
  ------------------------------------*/
+.current-thumbnail {
+  opacity: .3;
+}
+
 .product__preview {
   width: 100%;
   float: left;
@@ -1088,12 +1122,12 @@ textarea:disabled {
   }
 }
 
-.product__preview .image {
+.product__slider {
   margin-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 868px) {
-  .product__preview .image {
+  .product__slider {
     width: 78.4946236559%;
     float: right;
     margin-right: 0;
@@ -1101,20 +1135,23 @@ textarea:disabled {
 }
 
 @media screen and (min-width: 868px) {
-  .product__preview .thumbnails {
+  .product__thumbnails {
     width: 18.2795698925%;
     float: left;
     margin-right: 3.2258064516%;
   }
 }
 
-.product__preview .thumbnail {
+.product__thumbnails .slick-current {
+  opacity: .5;
+}
+
+.product__thumbnail {
   height: 125px;
-  background: #D8D8D8;
 }
 
 @media screen and (min-width: 868px) {
-  .product__preview .thumbnail {
+  .product__thumbnail {
     height: 125px;
     width: 100%;
     margin-bottom: 1.5rem;
@@ -1291,13 +1328,13 @@ textarea:disabled {
 
 @media screen and (min-width: 868px) {
   .product-card__close {
-    background: url(../images/close.svg) no-repeat center center #CCC;
+    background: url(../images/close.svg) no-repeat center;
     display: inline-block;
-    height: 15px;
+    height: 16px;
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
-    width: 15px;
+    width: 16px;
     transition: .3s;
     cursor: pointer;
   }
@@ -1350,9 +1387,9 @@ textarea:disabled {
 .social-icons .fa {
   font-size: 2.2rem;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
   text-align: center;
   color: #fff;
   transition: all 0.3s ease-in-out;
@@ -1387,12 +1424,29 @@ textarea:disabled {
  ------------------------------------*/
 /* Slider */
 .featured-slider {
-  text-shadow: 0 0 6px #000;
+  text-shadow: 0 0 3px #000;
 }
 
-.featured-slider h1 {
+.featured-slider .slide__title {
   color: #fff;
   font-size: 5rem;
+}
+
+.featured-slider .slide__subtitle {
+  margin: 0;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.featured-slider .slide__subtitle:before {
+  content: '';
+  display: block;
+  background: #fff;
+  height: 2px;
+  width: 50px;
+  margin: 1.5rem auto;
 }
 
 .featured-slider .btn {

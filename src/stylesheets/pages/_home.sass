@@ -5,11 +5,26 @@
  
 /* Slider */
 .featured-slider
-    text-shadow: 0 0 6px #000
+    text-shadow: 0 0 3px #000
 
-    h1
+    .slide__title
         color: #fff
         font-size: 5rem
-        
+
+    .slide__subtitle
+        margin: 0
+        font-family: $font-family
+        color: #fff
+        font-size: 2rem
+        text-transform: uppercase
+
+        &:before
+            content: ''
+            display: block
+            background: #fff
+            height: 2px
+            width: 50px
+            margin: $spacing auto
+
     .btn
         max-width: 75%

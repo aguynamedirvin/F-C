@@ -2,36 +2,46 @@
      Product
  ------------------------------------*/
 
+
+.current-thumbnail
+    opacity: .3
+
 .product
     @include nested(12)
     @extend %clearfix
 
-    // Preview
+    //
+    // Product preview
+    //
     &__preview
         @include span(12)
 
         @include mq($break-medium)
             @include span(6.5)
 
-        .image
+    // Product image slider
+    &__slider
+        margin-bottom: $spacing
+
+        @include mq($break-medium)
+            @include span(9.5 last)
+
+    // Product thumbnails
+    &__thumbnails
+        @include mq($break-medium)
+                @include span(2.5)
+        
+        .slick-current
+            opacity: .5
+
+    &__thumbnail
+        height: 125px
+
+        @include mq($break-medium)
+            height: 125px
+            width: 100%
             margin-bottom: $spacing
 
-            @include mq($break-medium)
-                @include span(9.5 last)
-
-        .thumbnails
-            @include mq($break-medium)
-                @include span(2.5)
-
-        .thumbnail
-            height: 125px
-            background: $color-alto
-            //@include gallery(1 of 3 .1)
-
-            @include mq($break-medium)
-                height: 125px
-                width: 100%
-                margin-bottom: $spacing
 
 
     // Details
@@ -175,13 +185,13 @@ $product-card-height: 500px
         display: none
 
         @include mq($break-medium)
-            background: url(../images/close.svg) no-repeat center center #CCC
+            background: url(../images/close.svg) no-repeat center
             display: inline-block
-            height: 15px
+            height: 16px
             position: absolute
             right: $spacing
             top: $spacing
-            width: 15px
+            width: 16px
             transition: .3s
             cursor: pointer
 
