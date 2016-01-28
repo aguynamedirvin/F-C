@@ -1,0 +1,47 @@
+/* ------------------------------------
+    Products Page
+ ------------------------------------*/
+
+
+.cat-nav
+    @extend %nav
+
+    border-bottom: 1px solid $color-alto
+    margin-bottom: $spacing * 2
+    overflow-x: scroll
+    padding: $spacing 0
+    text-transform: uppercase
+
+    ul
+        width: 1000px
+
+        @include mq($break-medium)
+            text-align: center
+            width: auto
+
+        li
+            margin: 0 $spacing
+
+
+.pages-nav
+    @extend %nav
+
+    margin-bottom: $spacing * 2
+    text-align: center
+
+    a
+        display: block
+        height: 50px
+        line-height: 50px
+        position: relative
+        text-align: center
+        width: 50px
+
+        &:before
+            border-radius: 50%
+            border: 1px solid $color-alto
+            content: ''
+            display: block
+            height: 50px
+            position: absolute
+            width: 50px

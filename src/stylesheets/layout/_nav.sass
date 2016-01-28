@@ -1,15 +1,35 @@
 /* ------------------------------------
     Navigation
  ------------------------------------*/
+
+
+%nav
+    font-size: 1.4rem
+    margin-bottom: $spacing
+
+    li
+        display: inline-block
+        list-style: none
+
+        a
+            color: $color-mine-shaft
+            text-decoration: none
+
+            &:hover
+                color: $color-primary
+
+            &.current
+                color: $color-primary
+
  
  
 #site-nav, 
 #cart
     background: $header-bg
-    -webkit-overflow-scrolling: touch
     box-shadow: 0 0 15px rgba(#000, .2)
     height: 100%
     overflow-y: auto
+    -webkit-overflow-scrolling: touch
     padding-top: 50px  // Header height
     position: fixed
     top: 0
@@ -25,21 +45,21 @@
 
  
 #site-nav
-    left: -100%
-    transition: left 0.3s
-    text-transform: uppercase
     font-family: $heading-family
+    left: -100%
+    text-transform: uppercase
+    transition: left 0.3s
 
     @include mq($break-medium)
         background: transparent
         box-shadow: none
+        float: left
         height: auto
+        line-height: $header-height-desktop  // header height
         padding-top: 0
         position: static
-        float: left
         top: 0
         width: auto
-        line-height: $header-height-desktop  // header height
         z-index: $header-zindex
 
     &.speed-in 
@@ -53,11 +73,6 @@
             @include mq($break-medium)
                 display: inline-block
                 margin-left: 1em
-
-                /*&.current 
-                    background: $header-link
-                    box-shadow: none
-                    color: #FFF*/
                 
                 .no-touch &:hover 
                     background: $header-link
@@ -65,15 +80,14 @@
 
             a 
                 border-bottom: 1px solid $color-grey
+                color: $main-text
                 display: block
                 height: 60px
                 line-height: 60px
                 padding: 0 1em
                 text-decoration: none
-                color: $main-text
     
                 @include mq($break-medium)
-                    //@include border-radius
                     border-bottom: none
                     display: inline-block
                     height: auto
@@ -81,13 +95,13 @@
                     padding: 1em 1.4em
     
                     &:after
+                        background: $color-primary
                         content: ''
                         display: block
-                        background: $color-primary
                         height: 1px
-                        width: 0
-                        transition: width .3s
                         margin: ($spacing / 2) auto
+                        transition: width .3s
+                        width: 0
     
                     &:hover:after
                         width: ($spacing * 2)
@@ -113,23 +127,20 @@
         right: 0
 
     h2 
-        font-size: 1.4rem
-        font-weight: bold
-        margin: 1em 0
-        text-transform: uppercase
-        padding: 0em 2em
+        font-size: 1.6rem
+        margin: 1rem 0
+        padding: 0rem 2rem
+        color: #fff
 
 
-    .cart-items 
-        padding: 0
-
+    .cart-items
         li 
             border-top: 1px solid $color-grey
-            padding: 1em
+            padding: 1rem
             position: relative
 
             @include mq($break-medium)
-                padding: 1em 2em 
+                padding: 1rem 2rem 
 
 
             &:last-child 
@@ -140,47 +151,46 @@
         color: $light-text
     
     .price 
-        margin-top: .4em
+        margin-top: .4rem
     
     .item-remove 
         @include center(y) // see mixin inside partials > _mixins.scss
-        background: url('../images/remove-item.svg') no-repeat center center
+        
+        background: url('../images/remove-item.svg') no-repeat center center $color-alto
         border-radius: 50%
-        height: 32px
+        height: 30px
         position: absolute
-        right: 1em
-        width: 32px
+        right: 1rem
+        width: 30px
+        transition: .3s
 
         @include mq($break-medium)
             right: 2em
 
+        &:hover
+            opacity: 0.8
+
         .no-touch &:hover 
             background-color: $color-alto
 
-    .cart-total 
-        padding-bottom: 1em
-        padding-top: 1em
-        padding: 2em 1em
+    .cart-total
+        @extend %clearfix
+        padding: 2rem 1rem
 
         @include mq($break-medium)
-            padding: 0 2em
+            padding: 0 2rem
 
         span 
             float: right
-
-        &:after  /* clearfix */
-            content: ''
-            display: table
-            clear: both
     
     .checkout-btn
         display: inline-block
         margin: 0 auto
         width: 100%
 
-    .go-to-cart 
+    .go-to-cart
         text-align: center
-        margin: 1em 0
+        margin: 1rem 0
 
-        a 
-            text-decoration: underline
+        a
+            color: #fff

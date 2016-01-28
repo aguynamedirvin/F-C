@@ -3,19 +3,10 @@
  ------------------------------------*/
 
 .breadcrumb
-    margin-bottom: $spacing
+    @extend %nav
 
     li
-        display: inline-block
         font-style: italic
-        list-style: none
-
-        a
-            color: $color-grey
-            text-decoration: none
-
-            &:hover
-                color: $color-mine-shaft
 
         &:after
             color: $color-grey
@@ -24,3 +15,9 @@
 
         &:last-of-type:after
             content: ''
+
+        a
+            color: $color-grey
+
+            &:hover
+                color: $color-mine-shaft

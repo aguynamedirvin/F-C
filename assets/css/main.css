@@ -77,7 +77,7 @@ ul, ul li {
     Typography
  ------------------------------------*/
 p {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 h1,
@@ -137,7 +137,7 @@ h5 {
   }
 }
 
-.wrap:after, .product:after {
+.wrap:after, #cart .cart-total:after, .section:after, .product:after {
   content: '';
   display: table;
   clear: both;
@@ -311,13 +311,36 @@ header a {
 /* ------------------------------------
     Navigation
  ------------------------------------*/
+.breadcrumb, .cat-nav, .pages-nav {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.breadcrumb li, .cat-nav li, .pages-nav li {
+  display: inline-block;
+  list-style: none;
+}
+
+.breadcrumb li a, .cat-nav li a, .pages-nav li a {
+  color: #3B3B3B;
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover, .cat-nav li a:hover, .pages-nav li a:hover {
+  color: #B14646;
+}
+
+.breadcrumb li a.current, .cat-nav li a.current, .pages-nav li a.current {
+  color: #B14646;
+}
+
 #site-nav,
 #cart {
   background: #3B3B3B;
-  -webkit-overflow-scrolling: touch;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   height: 100%;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding-top: 50px;
   position: fixed;
   top: 0;
@@ -341,23 +364,23 @@ header a {
 }
 
 #site-nav {
-  left: -100%;
-  transition: left 0.3s;
-  text-transform: uppercase;
   font-family: "Raleway", sans-serif;
+  left: -100%;
+  text-transform: uppercase;
+  transition: left 0.3s;
 }
 
 @media screen and (min-width: 868px) {
   #site-nav {
     background: transparent;
     box-shadow: none;
+    float: left;
     height: auto;
+    line-height: 7rem;
     padding-top: 0;
     position: static;
-    float: left;
     top: 0;
     width: auto;
-    line-height: 7rem;
     z-index: 4;
   }
 }
@@ -374,10 +397,6 @@ header a {
   #site-nav ul li {
     display: inline-block;
     margin-left: 1em;
-    /*&.current
-                    background: $header-link
-                    box-shadow: none
-                    color: #FFF*/
   }
   .no-touch #site-nav ul li:hover {
     background: #435779;
@@ -387,12 +406,12 @@ header a {
 
 #site-nav ul li a {
   border-bottom: 1px solid #7F7F7F;
+  color: #fff;
   display: block;
   height: 60px;
   line-height: 60px;
   padding: 0 1em;
   text-decoration: none;
-  color: #fff;
 }
 
 @media screen and (min-width: 868px) {
@@ -404,13 +423,13 @@ header a {
     padding: 1em 1.4em;
   }
   #site-nav ul li a:after {
+    background: #B14646;
     content: '';
     display: block;
-    background: #B14646;
     height: 1px;
-    width: 0;
-    transition: width .3s;
     margin: 0.75rem auto;
+    transition: width .3s;
+    width: 0;
   }
   #site-nav ul li a:hover:after {
     width: 3rem;
@@ -441,26 +460,21 @@ header a {
 }
 
 #cart h2 {
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin: 1em 0;
-  text-transform: uppercase;
-  padding: 0em 2em;
-}
-
-#cart .cart-items {
-  padding: 0;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+  padding: 0rem 2rem;
+  color: #fff;
 }
 
 #cart .cart-items li {
   border-top: 1px solid #7F7F7F;
-  padding: 1em;
+  padding: 1rem;
   position: relative;
 }
 
 @media screen and (min-width: 868px) {
   #cart .cart-items li {
-    padding: 1em 2em;
+    padding: 1rem 2rem;
   }
 }
 
@@ -474,19 +488,20 @@ header a {
 }
 
 #cart .price {
-  margin-top: .4em;
+  margin-top: .4rem;
 }
 
 #cart .item-remove {
   top: 50%;
   bottom: auto;
   transform: translateY(-50%);
-  background: url("../images/remove-item.svg") no-repeat center center;
+  background: url("../images/remove-item.svg") no-repeat center center #D8D8D8;
   border-radius: 50%;
-  height: 32px;
+  height: 30px;
   position: absolute;
-  right: 1em;
-  width: 32px;
+  right: 1rem;
+  width: 30px;
+  transition: .3s;
 }
 
 @media screen and (min-width: 868px) {
@@ -495,30 +510,26 @@ header a {
   }
 }
 
+#cart .item-remove:hover {
+  opacity: 0.8;
+}
+
 .no-touch #cart .item-remove:hover {
   background-color: #D8D8D8;
 }
 
 #cart .cart-total {
-  padding-bottom: 1em;
-  padding-top: 1em;
-  padding: 2em 1em;
+  padding: 2rem 1rem;
 }
 
 @media screen and (min-width: 868px) {
   #cart .cart-total {
-    padding: 0 2em;
+    padding: 0 2rem;
   }
 }
 
 #cart .cart-total span {
   float: right;
-}
-
-#cart .cart-total:after {
-  content: '';
-  display: table;
-  clear: both;
 }
 
 #cart .checkout-btn {
@@ -529,11 +540,11 @@ header a {
 
 #cart .go-to-cart {
   text-align: center;
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 #cart .go-to-cart a {
-  text-decoration: underline;
+  color: #fff;
 }
 
 /* ------------------------------------
@@ -627,7 +638,7 @@ header a {
   color: #fff;
 }
 
-.news-letter__container {
+.news-letter__form {
   margin: 0 auto;
   max-width: 800px;
 }
@@ -1346,23 +1357,8 @@ textarea:disabled {
 /* ------------------------------------
     Breadcrumbs
  ------------------------------------*/
-.breadcrumb {
-  margin-bottom: 1.5rem;
-}
-
 .breadcrumb li {
-  display: inline-block;
   font-style: italic;
-  list-style: none;
-}
-
-.breadcrumb li a {
-  color: #7F7F7F;
-  text-decoration: none;
-}
-
-.breadcrumb li a:hover {
-  color: #3B3B3B;
 }
 
 .breadcrumb li:after {
@@ -1373,6 +1369,14 @@ textarea:disabled {
 
 .breadcrumb li:last-of-type:after {
   content: '';
+}
+
+.breadcrumb li a {
+  color: #7F7F7F;
+}
+
+.breadcrumb li a:hover {
+  color: #3B3B3B;
 }
 
 /* ------------------------------------
@@ -1451,6 +1455,56 @@ textarea:disabled {
 
 .featured-slider .btn {
   max-width: 75%;
+}
+
+/* ------------------------------------
+    Products Page
+ ------------------------------------*/
+.cat-nav {
+  border-bottom: 1px solid #D8D8D8;
+  margin-bottom: 3rem;
+  overflow-x: scroll;
+  padding: 1.5rem 0;
+  text-transform: uppercase;
+}
+
+.cat-nav ul {
+  width: 1000px;
+}
+
+@media screen and (min-width: 868px) {
+  .cat-nav ul {
+    text-align: center;
+    width: auto;
+  }
+}
+
+.cat-nav ul li {
+  margin: 0 1.5rem;
+}
+
+.pages-nav {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.pages-nav a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  text-align: center;
+  width: 50px;
+}
+
+.pages-nav a:before {
+  border-radius: 50%;
+  border: 1px solid #D8D8D8;
+  content: '';
+  display: block;
+  height: 50px;
+  position: absolute;
+  width: 50px;
 }
 
 .heart {
