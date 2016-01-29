@@ -59,9 +59,79 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-
         
+        
+        <!-- Product Card -->
+        <div class="product-card">
+            
+            <span class="product-card__close"></span>
+            
+            <div class="product__preview">
+                    
+                <div class="slider  product__slider">
+                    <div class="product__slide">
+                        <img src="assets/images/examples/thumb_1.jpg" alt="Denim Shirt">
+                    </div>
+                    <div class="product__slide">
+                        <img src="assets/images/examples/thumb_2.jpg" alt="Denim Shirt">
+                    </div>
+                    <div class="product__slide">
+                        <img src="assets/images/examples/thumb_3.jpg" alt="Denim Shirt">
+                    </div>
+                </div>
 
+                <div class="product__thumbnails">
+                    <div class="product__thumbnail">
+                        <img src="assets/images/examples/thumb_1.jpg" alt="Denim Shirt">
+                    </div>
+                    <div class="product__thumbnail">
+                        <img src="assets/images/examples/thumb_2.jpg" alt="Denim Shirt">
+                    </div>
+                    <div class="product__thumbnail">
+                        <img src="assets/images/examples/thumb_3.jpg" alt="Denim Shirt">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="product__details">
+                <h1>Denim Shirt</h1>
+                <div class="product__price">
+                    <span class="price  price--sale">$19.99</span>
+                    <span class="price  price--crossed">$49.99</span>
+                </div>
+                <div class="product__options">
+                    <div class="product__select  product__select-size">
+                        <select id="size">
+                            <option value="hide">Select size</option>
+                            <option value="small" rel="icon-temperature">Small</option>
+                            <option value="medium">Medium</option>
+                            <option value="large">Large</option>
+                            <option value="xlarge">X-Large</option>
+                        </select>
+                    </div>
+                    <div class="product__select  product__select-qty">
+                        <select id="qty">
+                            <option value="hide">Qty.</option>
+                            <option value="1" rel="icon-temperature">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="btn btn--accent">Add to cart</div>
+                </div>
+                <div class="product__info">
+                    <h3>Let your friends know</h3>
+                    <ul class="social-icons"> 
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- / Product Card -->
 
         <main class="wrap">
 
@@ -215,7 +285,7 @@
                         </div>
                     </li>
 
-                </ul><!-- / .products -->
+                </ul><!-- /.products -->
 
 
             </section><!-- / related products -->
@@ -223,10 +293,23 @@
 
         </main><!-- / Main Content -->
 
+        <!-- Newsletter -->
+        <section class="section  news-letter">
+            <div class="news-letter__form">
+                <h2 class="section__title">Send me exclusive offers</h2>
+                <form>
+                    <input type="text" placeholder="Your email">
+                    <input class="btn  btn--accent" type="submit" value="Sign me up!">
+                </form>
+            </div>
+        </section>
+
 
 
         <!-- Cart -->
         <div class="cart">
+
+            <h2 class="cart__title">Cart</h2>
 
             <ul class="cart__items">
                 <li>
@@ -267,8 +350,8 @@
             </ul> <!-- cart-items -->
 
             <div class="cart__total">
-                <div class="cart__total__heading">Total:</div>
                 <div class="cart__total__price">$39.96</div>
+                <div class="cart__total__title">Total</div>
             </div> <!-- cart-total -->
 
             <a href="#0" class="btn  btn--accent  checkout-btn">Checkout</a>
@@ -304,7 +387,8 @@
                     <ul class="social-icons"> 
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                     </ul>
                 </div>
 
@@ -313,7 +397,8 @@
 
 
         <!-- JavaScript -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>-->
+        <script src="assets/js/vendor/jquery-2.2.0.min.js"></script>
         <script src="assets/js/main.min.js"></script>
         <script src="assets/js/mobile.min.js"></script>
 

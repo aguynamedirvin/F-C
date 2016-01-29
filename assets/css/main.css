@@ -302,7 +302,7 @@ header a {
 }
 
 #cart-trigger a {
-  background: url("../images/cart-2.svg") no-repeat center center;
+  background: url("../images/cart.svg") no-repeat center center;
 }
 
 @media screen and (min-width: 868px) {
@@ -545,8 +545,8 @@ header a {
 
 .cart .checkout-btn {
   display: block;
-  margin: 0 1.5rem;
-  width: 100%;
+  margin: 0 auto;
+  width: calc(100% - ($spacing * 2));
 }
 
 .cart .go-to-cart {

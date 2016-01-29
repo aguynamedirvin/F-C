@@ -17,7 +17,8 @@ module.exports = function (grunt) {
             src: {
                 css: 'src/stylesheets',
                 img: 'src/images',
-                js: 'src/js'
+                js: 'src/js',
+                html: 'src/html'
             },
 
             // Distribution
@@ -56,6 +57,11 @@ module.exports = function (grunt) {
             js: {
                 files: '<%= dirs.src.js %>/**/*.js',
                 tasks: ['uglify:default']
+            },
+            
+            html: {
+                files: '<%=dirs.src.html %>/*.html',
+                tasks: ['includes:default']
             }
         },
 
@@ -193,6 +199,21 @@ module.exports = function (grunt) {
                 }]
             }
         },
+        
+        
+        /**
+            Concatenate HTML files
+            https://github.com/vanetix/grunt-includes
+        **/
+        includes: {
+            default: {
+                files: [{
+                    cwd: '<%= dirs.src.html %>/',
+                    src: '*.html',
+                    dest: ''
+                }]
+            }
+        },
 
 
     });
@@ -208,19 +229,20 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-includes');
 
 
     /**
         Register Tasks
     **/
     // Build our CSS and JS files
-    grunt.registerTask('build', ['sass', 'uglify:default']);
+    grunt.registerTask('build', ['includes', 'sass', 'uglify:default']);
 
     // Watch our files and compile if any changes
     grunt.registerTask('default', ['build', 'watch']);
 
     // Production - Build the files for production use
-    grunt.registerTask('production', ['sass', 'postcss', 'cmq', 'uglify:build', 'imagemin']);
+    grunt.registerTask('production', ['includes', 'sass', 'postcss', 'cmq', 'uglify:build', 'imagemin']);
 
 
 };
