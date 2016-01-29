@@ -25,7 +25,8 @@ module.exports = function (grunt) {
             dist: {
                 css: 'assets/css',
                 img: 'assets/images',
-                js: 'assets/js'
+                js: 'assets/js',
+                html: ''
             }
         },
 
@@ -210,7 +211,7 @@ module.exports = function (grunt) {
                 files: [{
                     cwd: '<%= dirs.src.html %>/',
                     src: '*.html',
-                    dest: '',
+                    dest: '<%= dirs.dist.html %>',
                     flatten: true
                 }]
             }
