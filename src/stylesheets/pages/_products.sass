@@ -7,16 +7,40 @@
     @extend %nav
 
     border-bottom: 1px solid $color-alto
+    display: relative
     margin-bottom: $spacing * 2
-    overflow-x: scroll
-    padding: $spacing 0
     text-transform: uppercase
 
+    .wrap
+        overflow-y: hidden
+        overflow-x: auto
+
+    &:before, &:after
+        background: #000
+        content: ''
+        display: block
+        height: 100%
+        position: absolute
+        top: -2px
+        width: 80px
+    
+    &:before
+        background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, #fff 100%)
+        left: 0
+
+
+    &:after
+        background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #fff 100%)
+        right: 0
+
+
     ul
+        height: $header-height
+        line-height: $header-height
         width: 1000px
+        /*padding: $spacing 0*/
 
         @include mq($break-medium)
-            text-align: center
             width: auto
 
         li
