@@ -5,7 +5,7 @@ jQuery(document).ready(function($){
         $menu_navigation = $('#site-nav'),
         $cart_trigger = $('#cart-trigger'),
         $hamburger_icon = $('#hamburger-menu'),
-        $lateral_cart = $('#cart'),
+        $lateral_cart = $('.cart'),
         $shadow_layer = $('#shadow-layer');
 
     // open lateral menu on mobile

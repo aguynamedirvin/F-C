@@ -37,3 +37,29 @@ function move_credit( $site_info, $MQ) {
     }
 
 }
+
+
+/** Set the size for horizontal scroll menu **/
+$(document).ready(function() {
+
+    var container_width, link_width;
+
+    count = 0;
+    container_width = 0;
+
+    $('.nav a').each(function(index) {
+
+      count++;
+      link_width = parseInt($(this).width(), 10);
+
+      container_width += parseInt($(this).width(), 10);
+
+      console.log('Link ' + count + ' is ' + link_width + ' wide.');
+    });
+
+    console.log('The total width is: ' + container_width);
+
+    $(".cat-nav ul").css("width", container_width - 100);
+
+
+});
