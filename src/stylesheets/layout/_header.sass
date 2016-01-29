@@ -4,7 +4,7 @@
 
 $main-text: #fff // main text
 
-$header-bg: $color-mine-shaft
+$header-bg: darken($color-mine-shaft, 5)
 $header-link: #435779
 
 $header-height: 5rem
@@ -90,6 +90,7 @@ header
 
     a 
         height: 100%
+        max-width: 50px
 
 
 /** Hamburger Menu **/
@@ -148,16 +149,14 @@ header
 /** Cart Menu Icon Trigger **/
 #cart-trigger 
     right: 0
+    line-height: 100%
 
     @include mq($break-medium)
         display: inline-block
         float: right
-        height: $header-height-desktop
 
     a 
-        background: darken($header-bg, 5%) url('../images/cart.svg') no-repeat center center
+        background: url('../images/cart-2.svg') no-repeat center center
 
         @include mq($break-medium)
-            background-color: darken($header-bg, 5%)
-            border-left: none
             width: 100px

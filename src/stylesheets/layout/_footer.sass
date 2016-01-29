@@ -3,7 +3,7 @@
  ------------------------------------*/
 
 .site-footer
-    background: #2F2F2F
+    background: darken($color-mine-shaft, 5)
     color: #fff
     font-size: 1.8rem
     padding: ($spacing * 2)
@@ -36,12 +36,14 @@
             font-size: 1.8rem
             margin: 0 0 $spacing
 
-
     &__links
         @include mq($break-medium)
             li
                 display: inline-block
                 margin-right: $spacing
+
+    .social-icons
+        margin: 0
 
 
 .site-info
@@ -53,3 +55,23 @@
 
     .site-note
         margin-top: $spacing
+
+        a
+            border-bottom: 1px solid #777
+
+
+// Heart
+.heart
+    display: inline-block
+    height: 1.2rem
+    margin: 0 2px
+    position: relative
+    width: 15px
+
+    &:before
+        color: $color-apple-blossom
+        content: "\f004"
+        font-family: "FontAwesome"
+        left: 0
+        position: absolute
+        top: -2px
