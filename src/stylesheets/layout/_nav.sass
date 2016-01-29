@@ -12,12 +12,12 @@
         list-style: none
 
         a
-            color: $color-mine-shaft
+            color: $color-grey
             text-decoration: none
             border: 0
 
             &:hover
-                color: $color-primary
+                color: $color-mine-shaft
 
             &.current
                 color: $color-primary
@@ -25,7 +25,7 @@
  
  
 #site-nav, 
-#cart
+.cart
     background: $header-bg
     box-shadow: 0 0 15px rgba(#000, .2)
     height: 100%
@@ -119,79 +119,95 @@
     Slide-Out Cart
  ------------------------------------*/
 
-#cart
+.cart
     color: #fff
     right: -100%
     transition: right 0.3s
+    overflow-x: hidden
+    overflow-y: auto
 
     &.speed-in 
         right: 0
 
-    h2 
-        font-size: 1.6rem
-        margin: 1rem 0
-        padding: 0rem 2rem
+    &__title
         color: #fff
+        font-size: 2rem
+        margin:
+            top: 0
+            bottom: $spacing
+        text-align: center
 
-
-    .cart-items
-        li 
+    &__items
+        li
             border-top: 1px solid $color-grey
-            padding: 1rem
+            padding: $spacing * 2
             position: relative
+            @extend %clearfix
+
+            &:last-child
+                border-bottom: 1px solid $color-grey
+        
+
+    &__product
+
+        &__thumb
+            @include span(2.5)
+
+        &__title
+            color: #fff
+            font:
+                family: $heading-family
+                size: 1.8rem
+                weight: 600
+            margin: 0
+            text-transform: uppercase
+
+        &__remove 
+            @include center(y) // see mixin inside partials > _mixins.scss
+            
+            background: url('../images/remove-item.svg') no-repeat center center $color-alto
+            border-radius: 50%
+            height: 30px
+            position: absolute
+            right: 1rem
+            transition: .3s
+            width: 30px
 
             @include mq($break-medium)
-                padding: 1rem 2rem 
+                right: 2em
 
+            &:hover
+                opacity: 0.8
 
-            &:last-child 
-                border-bottom: 1px solid $color-grey
+            .no-touch &:hover 
+                background-color: $color-alto
 
-    .qty, 
-    .price 
-        color: $color-alto
+    &__total
+        text-align: center
+        margin: $spacing 0
+
+        &__price
+            font-size: 3rem
+
+        &__title
+            color: #fff
+            font:
+                family: $heading-family
+                size: 1.8rem
+                weight: 600
+            margin: 0
+            text-transform: uppercase
     
-    .price 
-        margin-top: .4rem
-    
-    .item-remove 
-        @include center(y) // see mixin inside partials > _mixins.scss
-        
-        background: url('../images/remove-item.svg') no-repeat center center $color-alto
-        border-radius: 50%
-        height: 30px
-        position: absolute
-        right: 1rem
-        width: 30px
-        transition: .3s
-
-        @include mq($break-medium)
-            right: 2em
-
-        &:hover
-            opacity: 0.8
-
-        .no-touch &:hover 
-            background-color: $color-alto
-
-    .cart-total
-        @extend %clearfix
-        padding: 2rem 1rem
-
-        @include mq($break-medium)
-            padding: 0 2rem
-
-        span 
-            float: right
     
     .checkout-btn
-        display: inline-block
-        margin: 0 auto
+        display: block
+        margin: 0 $spacing
         width: 100%
 
     .go-to-cart
         text-align: center
-        margin: 1rem 0
+        margin-top: $spacing
 
         a
             color: #fff
+    
