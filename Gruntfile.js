@@ -210,7 +210,8 @@ module.exports = function (grunt) {
                 files: [{
                     cwd: '<%= dirs.src.html %>/',
                     src: '*.html',
-                    dest: ''
+                    dest: '',
+                    flatten: true
                 }]
             }
         },
