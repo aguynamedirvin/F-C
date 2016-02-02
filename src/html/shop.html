@@ -24,107 +24,11 @@ include "parts/header.html"
                 <!-- Products -->
                 <ul class="product__list">
 
-                    <li class="product-item">
-                        <div class="product-item__preview">
-                            <a href="product.html">
-                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
-                            </a>
-                            <a class="quick-view" href="#quick-view">Quickview</a>
-                        </div>
-                        <div class="product-item__desc">
-                            <h3 class="product-item__title">
-                            <a href="product.html">Denim Shirt</a>
-                        </h3>
-                            <div class="product-item__price">
-                                <span class="price">$49.99</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="product-item">
-                        <div class="product-item__preview">
-                            <a href="product.html">
-                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
-                            </a>
-                            <a class="quick-view" href="#quick-view">Quickview</a>
-                        </div>
-                        <div class="product-item__desc">
-                            <h3 class="product-item__title">
-                            <a href="product.html">Denim Shirt</a>
-                        </h3>
-                            <div class="product-item__price">
-                                <span class="price">$49.99</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="product-item">
-                        <div class="product-item__preview">
-                            <a href="product.html">
-                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
-                            </a>
-                            <a class="quick-view" href="#quick-view">Quickview</a>
-                        </div>
-                        <div class="product-item__desc">
-                            <h3 class="product-item__title">
-                            <a href="product.html">Denim Shirt</a>
-                        </h3>
-                            <div class="product-item__price">
-                                <span class="price">$49.99</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="product-item">
-                        <div class="product-item__preview">
-                            <a href="product.html">
-                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
-                            </a>
-                            <a class="quick-view" href="#quick-view">Quickview</a>
-                        </div>
-                        <div class="product-item__desc">
-                            <h3 class="product-item__title">
-                            <a href="product.html">Denim Shirt</a>
-                        </h3>
-                            <div class="product-item__price">
-                                <span class="price">$49.99</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="product-item">
-                        <div class="product-item__preview">
-                            <a href="product.html">
-                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
-                            </a>
-                            <a class="quick-view" href="#quick-view">Quickview</a>
-                        </div>
-                        <div class="product-item__desc">
-                            <h3 class="product-item__title">
-                            <a href="product.html">Denim Shirt</a>
-                        </h3>
-                            <div class="product-item__price">
-                                <span class="price">$49.99</span>
-                            </div>
-                        </div>
-                    </li>
-
-                    <li class="product-item">
-                        <div class="product-item__preview">
-                            <a href="product.html">
-                                <img src="http://squarepixl.com/woocommerce/wp-content/uploads/2016/01/4b66df1d98c92b728517320adc5a645e_1024x1024-568x725.jpeg" alt="Denim Shirt">
-                            </a>
-                            <a class="quick-view" href="#quick-view">Quickview</a>
-                        </div>
-                        <div class="product-item__desc">
-                            <h3 class="product-item__title">
-                            <a href="product.html">Denim Shirt</a>
-                        </h3>
-                            <div class="product-item__price">
-                                <span class="price">$49.99</span>
-                            </div>
-                        </div>
-                    </li>
+                    include "parts/product__items.html"
+                    
+                    include "parts/product__items.html"
+                    
+                    include "parts/product__items.html"
 
                 </ul><!-- /.products -->
 
@@ -134,13 +38,14 @@ include "parts/header.html"
             <div class="pages-nav  nav">
                 <div class="wrap">
                     <ul class="nav">
+                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
                         <li><a href="#">1</a></li>
                         <li><a class="current" href="#">2</a></li>
                         <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
                         <li>...</li>
                         <li><a href="#">8</a></li>
                         <li><a href="#">9</a></li>
+                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
                     </ul>
                 </div>
             </div>
