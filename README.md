@@ -17,6 +17,8 @@ You can grab all the tools here:
 │   └── js
 │
 ├── src
+│   ├── html
+│   │   ├──parts
 │   ├── images
 │   ├── js
 │   │   ├── vendor
