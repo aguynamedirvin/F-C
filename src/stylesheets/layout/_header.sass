@@ -5,7 +5,6 @@
 $main-text: #fff // main text
 
 $header-bg: darken($color-mine-shaft, 5)
-$header-link: #435779
 
 $header-height: 5rem
 $header-height-desktop: 7rem
@@ -45,7 +44,7 @@ body
     white-space: nowrap
 
 
-header 
+.site-header 
     background: rgba($header-bg, .97)
     font-family: $heading-family
     height: $header-height
@@ -78,8 +77,8 @@ header
         transform: scale(1)
 
 
-/** Navigation Menu **/
-#hamburger-menu, 
+/** Navigation Menu Trigger Buttons **/
+#hamburger-menu,
 #cart-trigger 
     height: 100%
     position: absolute
@@ -91,6 +90,22 @@ header
     a 
         height: 100%
         max-width: 50px
+
+
+/** Cart Menu Icon Trigger **/
+#cart-trigger
+    display: inline-block
+    float: right
+    right: 0
+    
+    @include mq($break-medium)
+        line-height: $header-height-desktop
+    
+    a
+        background: url('../images/cart.svg') no-repeat center center
+
+        @include mq($break-medium)
+            width: 100px
 
 
 /** Hamburger Menu **/
@@ -144,19 +159,3 @@ header
 
         &:after
             transform: translateY(0) rotate(45deg)
-
-
-/** Cart Menu Icon Trigger **/
-#cart-trigger 
-    right: 0
-    line-height: 100%
-
-    @include mq($break-medium)
-        display: inline-block
-        float: right
-
-    a 
-        background: url('../images/cart.svg') no-repeat center center
-
-        @include mq($break-medium)
-            width: 100px

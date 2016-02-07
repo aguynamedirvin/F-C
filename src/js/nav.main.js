@@ -85,10 +85,10 @@ function move_navigation( $navigation, $MQ) {
     if ( $(window).width() >= $MQ ) {
         $navigation.detach();
         //$navigation.appendTo('header');
-        $navigation.insertAfter('header > .wrap > .logo');
+        $navigation.insertAfter('.site-header > .wrap > .logo');
     } else {
         $navigation.detach();
-        $navigation.insertAfter('header');
+        $navigation.insertAfter('.site-header');
     }
 
 }

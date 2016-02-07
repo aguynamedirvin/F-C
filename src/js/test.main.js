@@ -1,10 +1,14 @@
 // Test Product Quick View
 $('.quick-view').on('click', function() {
     $('.product-card').show();
+    
+    $('body').toggleClass('overlay');
 });
 
 $('.product-card__close').on('click', function() {
     $('.product-card').hide();
+    
+    $('body').toggleClass('overlay');
 });
 
 

@@ -1,0 +1,49 @@
+/* ------------------------------------
+    Blog Page
+ ------------------------------------*/
+ 
+ 
+.article
+    border-bottom: 1px solid $color-alto
+    margin-bottom: $spacing * 2
+    padding-bottom: $spacing * 2
+    @extend %clearfix
+
+    &:last-of-type
+        border: 0
+
+    a
+        color: $color-primary
+
+        &:hover
+            color: $color-primary
+                
+    header
+        a
+            text-decoration: none
+        
+    &__title
+        a
+            color: $color-mine-shaft
+        
+    &__meta
+        font-style: italic
+
+        a
+            text-decoration: none
+            color: $color-grey
+
+    &__content
+    
+        img
+            min-width: 100%
+            margin: $spacing 0
+
+            @include mq($break-medium)
+                width: auto
+
+        ul
+            margin-left: $spacing * 2
+
+            li 
+                list-style-type: circle

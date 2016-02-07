@@ -28,8 +28,10 @@
 
     // Product thumbnails
     &__thumbnails
+        @extend %clearfix
+        
         @include mq($break-medium)
-                @include span(2.5)
+            @include span(2.5)
         
         .slick-current
             opacity: .5
