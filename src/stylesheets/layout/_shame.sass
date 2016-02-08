@@ -5,11 +5,20 @@
     line-height: 1
 
 
+// Use image in place of text
+.img-replace
+    display: inline-block
+    overflow: hidden
+    text-indent: 100%
+    white-space: nowrap
+
+
 // Prices
 .price
-    &--crossed
+    &--crossed, del
         color: $color-grey
         text-decoration: line-through
 
-    &--sale
-        color: $color-apple-blossom
+    &--sale, ins
+        //color: $color-apple-blossom
+        text-decoration: none

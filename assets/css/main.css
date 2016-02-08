@@ -143,7 +143,7 @@ h5 {
 }
 
 @media screen and (min-width: 868px) {
-  .page {
+  .wrap--page {
     max-width: 760px;
   }
 }
@@ -165,13 +165,6 @@ body {
   body {
     padding-top: 7rem;
   }
-}
-
-.img-replace {
-  display: inline-block;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap;
 }
 
 .site-header {
@@ -242,12 +235,6 @@ body {
   right: 0;
 }
 
-@media screen and (min-width: 868px) {
-  #cart-trigger {
-    line-height: 7rem;
-  }
-}
-
 #cart-trigger a {
   background: url("../images/cart.svg") no-repeat center center;
 }
@@ -255,6 +242,7 @@ body {
 @media screen and (min-width: 868px) {
   #cart-trigger a {
     width: 100px;
+    line-height: 7rem;
   }
 }
 
@@ -344,6 +332,7 @@ body {
   color: #B14646;
 }
 
+/** Site Navigation **/
 #site-nav,
 .cart {
   -webkit-overflow-scrolling: touch;
@@ -934,6 +923,7 @@ ul.slick-dots li button:before {
     Form Inputs
  ------------------------------------*/
 input[type='text'],
+input[type='email'],
 input[type='password'],
 textarea, .btn {
   border-radius: 0;
@@ -956,6 +946,7 @@ textarea, .btn {
 
 @media screen and (min-width: 868px) {
   input[type='text'],
+  input[type='email'],
   input[type='password'],
   textarea, .btn {
     width: 30rem;
@@ -963,6 +954,7 @@ textarea, .btn {
 }
 
 input[type='text'],
+input[type='email'],
 input[type='password'],
 textarea {
   text-transform: none;
@@ -1647,11 +1639,18 @@ textarea:disabled {
   line-height: 1;
 }
 
-.price--crossed {
+.img-replace {
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.price--crossed, .price del {
   color: #7F7F7F;
   text-decoration: line-through;
 }
 
-.price--sale {
-  color: #B14646;
+.price--sale, .price ins {
+  text-decoration: none;
 }
