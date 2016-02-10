@@ -142,6 +142,10 @@ h5 {
   }
 }
 
+.wrap--page {
+  padding: 6rem 0;
+}
+
 @media screen and (min-width: 868px) {
   .wrap--page {
     max-width: 760px;
@@ -190,6 +194,19 @@ body {
   text-decoration: none;
 }
 
+#logo,
+#cart-trigger {
+  display: inline-block;
+  line-height: 5rem;
+}
+
+@media screen and (min-width: 868px) {
+  #logo,
+  #cart-trigger {
+    line-height: 7rem;
+  }
+}
+
 /** Logo **/
 #logo {
   color: #fff;
@@ -222,34 +239,23 @@ body {
   }
 }
 
-#hamburger-menu a,
-#cart-trigger a {
-  height: 100%;
-  max-width: 50px;
-}
-
 /** Cart Menu Icon Trigger **/
 #cart-trigger {
-  display: inline-block;
-  float: right;
-  right: 0;
-}
-
-#cart-trigger a {
   background: url("../images/cart.svg") no-repeat center center;
+  right: 0;
+  width: 50px;
 }
 
 @media screen and (min-width: 868px) {
-  #cart-trigger a {
-    width: 100px;
-    line-height: 7rem;
+  #cart-trigger {
+    position: absolute;
+    right: 1.5rem;
   }
 }
 
 /** Hamburger Menu **/
 #hamburger-menu {
   color: transparent;
-  display: block;
   left: 1.5rem;
   overflow: hidden;
   white-space: nowrap;
@@ -337,7 +343,6 @@ body {
 .cart {
   -webkit-overflow-scrolling: touch;
   background: #2b2b2b;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   height: 100%;
   overflow-y: auto;
   padding-top: 50px;
@@ -371,8 +376,7 @@ body {
 
 @media screen and (min-width: 868px) {
   #site-nav {
-    background: transparent;
-    box-shadow: none;
+    background: none;
     float: left;
     height: auto;
     line-height: 7rem;
@@ -1520,6 +1524,7 @@ textarea:disabled {
 
 .featured-slider .btn {
   max-width: 75%;
+  text-shadow: none;
 }
 
 /* ------------------------------------
@@ -1653,4 +1658,31 @@ textarea:disabled {
 
 .price--sale, .price ins {
   text-decoration: none;
+}
+
+.shop {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-size: cover;
+  padding: 1.5rem;
+  height: 300px;
+  margin-bottom: 3rem;
+}
+
+@media screen and (min-width: 868px) {
+  .shop {
+    width: 49%;
+    height: 500px;
+    display: inline-block;
+  }
+}
+
+.shop--men {
+  background-position: left;
+  background-image: url("../images/examples/shop--men.jpg");
+}
+
+.shop--women {
+  background-image: url("../images/examples/shop--women.jpg");
 }

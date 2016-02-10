@@ -36,6 +36,14 @@ body
         text-decoration: none
 
 
+#logo,
+#cart-trigger
+    display: inline-block
+    line-height: $header-height
+
+    @include mq($break-medium)
+        line-height: $header-height-desktop
+
 /** Logo **/ 
 #logo
     color: $main-text
@@ -49,40 +57,30 @@ body
         width: 100px
         transform: scale(1)
 
-
 /** Navigation Menu Trigger Buttons **/
 #hamburger-menu,
-#cart-trigger 
+#cart-trigger
     height: 100%
     position: absolute
     top: 0
 
-    @include mq($break-medium) 
+    @include mq($break-medium)
         position: static
-
-    a 
-        height: 100%
-        max-width: 50px
-
 
 /** Cart Menu Icon Trigger **/
 #cart-trigger
-    display: inline-block
-    float: right
+    background: url('../images/cart.svg') no-repeat center center
     right: 0
-    
-    a
-        background: url('../images/cart.svg') no-repeat center center
+    width: 50px
 
-        @include mq($break-medium)
-            width: 100px
-            line-height: $header-height-desktop
+    @include mq($break-medium)
+        position: absolute
+        right: $spacing
 
 
 /** Hamburger Menu **/
 #hamburger-menu
     color: transparent // Hide Text
-    display: block
     left: $spacing
     overflow: hidden
     white-space: nowrap

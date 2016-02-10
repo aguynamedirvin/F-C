@@ -22,3 +22,27 @@
     &--sale, ins
         //color: $color-apple-blossom
         text-decoration: none
+
+
+
+.shop
+    background:
+        position: center
+        repeat: no-repeat
+        size: auto 100%
+        size: cover
+    padding: $spacing
+    height: 300px
+    margin-bottom: $spacing * 2
+
+    @include mq($break-medium)
+        width: 49%
+        height: 500px
+        display: inline-block
+
+    &--men
+        background-position: left
+        background-image: url('../images/examples/shop--men.jpg')
+
+    &--women
+        background-image: url('../images/examples/shop--women.jpg')
