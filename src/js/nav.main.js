@@ -3,9 +3,9 @@ jQuery(document).ready(function($){
     // if you change this breakpoint in the style.css file (or _layout.scss if you use SASS), don't forget to update this value as well
     var $L = 868,
         $menu_navigation = $('#site-nav'),
-        $cart_trigger = $('#cart-trigger'),
+        $cart_trigger = $('#nav-cart-trigger'),
         $hamburger_icon = $('#hamburger-menu'),
-        $lateral_cart = $('.cart'),
+        $lateral_cart = $('.nav-cart'),
         $shadow_layer = $('#shadow-layer');
 
     // open lateral menu on mobile
