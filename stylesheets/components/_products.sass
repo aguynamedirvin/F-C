@@ -1,0 +1,144 @@
+/* ------------------------------------
+     Product
+ ------------------------------------*/
+
+
+.current-thumbnail
+    opacity: .3
+
+.product
+    @include nested(12)
+    @extend %clearfix
+
+    //
+    // Product preview
+    //
+    &__preview
+        @include span(12)
+
+        @include mq($break-medium)
+            @include span(6.5)
+
+    // Product image slider
+    &__slider
+        margin-bottom: $spacing
+
+        @include mq($break-medium)
+            @include span(9.5 last)
+
+    // Product thumbnails
+    &__thumbnails
+        @extend %clearfix
+
+        @include mq($break-medium)
+            @include span(2.5)
+
+        .slick-current
+            opacity: .5
+
+    &__thumbnail
+        height: 125px
+
+        @include mq($break-medium)
+            height: 125px
+            width: 100%
+            margin-bottom: $spacing
+
+
+
+    // Details
+    &__details
+        @include mq($break-medium)
+            @include span(5 last)
+
+    &__price
+        font-size: 3.6rem
+
+    &__options
+        margin: ($spacing * 2) 0
+
+        .btn
+            width: 100%
+
+    &__select
+
+        .select
+            margin: 0
+            width: 100%
+
+        @include mq($break-medium)
+            &-size
+                @include span(8)
+
+            &-qty
+                @include span(4 last)
+
+    &__info
+        border-top: 1px solid $color-alto
+        padding: ($spacing * 3) 0
+
+        h3
+            font-size: 1.8rem
+            margin: 0
+
+        li
+            list-style: circle inside
+
+
+/* ------------------------------------
+    Product Items
+ ------------------------------------*/
+.product__list
+    @include nested(12)
+
+.product-item
+    margin-bottom: gutter()
+    text-align: center
+
+    // For small screens
+    @include mq($break-small, $break-medium)
+        @include span(6)
+
+        &:nth-child(2n)
+            @include last
+
+    // For larger screens
+    @include mq($break-medium)
+        @include span(4)
+
+        &:nth-child(3n)
+            @include last
+
+    &__preview
+        overflow: hidden
+        position: relative
+
+        img
+            transition: .3s
+
+            &:hover
+                opacity: .8
+                
+    &__desc
+        margin-top: $spacing
+        font-size: 1.8rem
+
+    &__title
+        font-size: 1.8rem
+        margin: 0 0 ($spacing / 2)
+
+        a
+            color: $color-mine-shaft
+            text-decoration: none
+
+        &:after
+            background: $color-mine-shaft
+            content: ''
+            display: block
+            height: 1px
+            margin: 3px auto
+            transition: .3s
+            width: ($spacing * 3)
+
+        .product-item:hover &:after
+            width: ($spacing * 5)

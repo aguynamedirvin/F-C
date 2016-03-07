@@ -1,0 +1,26 @@
+/* ------------------------------------
+    Grid
+ ------------------------------------*/
+
+%clearfix
+    &:after
+        content: ''
+        display: table
+        clear: both
+
+.wrap
+    margin: 0 auto
+    max-width: 90%
+    @extend %clearfix
+
+    @include mq($break-medium)
+        @include container
+
+.wrap--page
+    padding: ($spacing * 4) 0
+
+    @include mq($break-medium)
+        max-width: 760px
+
+main
+    padding: ($spacing * 4) 0

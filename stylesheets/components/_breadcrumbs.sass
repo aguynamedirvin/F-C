@@ -1,0 +1,25 @@
+/* ------------------------------------
+    Breadcrumbs
+ ------------------------------------*/
+
+.breadcrumb
+    @extend %nav
+
+    li
+        font-style: italic
+        font-size: 1.6rem
+
+        &:after
+            color: $color-grey
+            content: '>'
+            margin: 0 1rem
+            display: inline-block
+
+        &:last-of-type:after
+            content: ''
+
+        a
+            color: $color-grey
+
+            &:hover
+                color: $color-mine-shaft

@@ -15,18 +15,18 @@ module.exports = function (grunt) {
         dirs: {
             // Source
             src: {
-                css: 'src/stylesheets',
-                img: 'src/images',
-                js: 'src/js',
-                html: 'src/html'
+                css: 'stylesheets',
+                img: 'images',
+                js: 'js',
+                html: 'html'
             },
 
             // Distribution
             dist: {
-                css: 'assets/css',
-                img: 'assets/images',
-                js: 'assets/js',
-                html: ''
+                css: 'dist/assets/css',
+                img: 'dist/assets/images',
+                js: 'dist/assets/js',
+                html: 'dist'
             }
         },
 
@@ -59,7 +59,7 @@ module.exports = function (grunt) {
                 files: '<%= dirs.src.js %>/**/*.js',
                 tasks: ['uglify:default']
             },
-            
+
             html: {
                 files: '<%=dirs.src.html %>/**/*.html',
                 tasks: ['includes']
@@ -96,7 +96,7 @@ module.exports = function (grunt) {
         },
 
 
-        /** 
+        /**
             Finish off our CSS
             https://github.com/nDmitry/grunt-postcss
         **/
@@ -105,7 +105,7 @@ module.exports = function (grunt) {
                 processors: [
                     require('autoprefixer')({ // Add vendor prefixes
                         browsers: [
-                            'last 2 versions', 
+                            'last 2 versions',
                             'ie 8-9',
                         ]
                     }),
@@ -148,10 +148,10 @@ module.exports = function (grunt) {
                         src: '<%= dirs.src.js %>/*.main.js',
 
                         /**
-                        
-                            Or you can orgranize by folder   
+
+                            Or you can orgranize by folder
                             Example: src/main/script1.js & src/main/script2.js -> assets/js/main.min.js
-                            
+
                             expand: true,
                             cwd: '<%= dirs.src.js %>/main',
                             src: '*.main.js',
@@ -183,7 +183,7 @@ module.exports = function (grunt) {
         },
 
 
-        /** 
+        /**
             Minify our images
             https://github.com/gruntjs/grunt-contrib-imagemin
         **/
@@ -200,8 +200,8 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        
-        
+
+
         /**
             Concatenate HTML files
             https://github.com/vanetix/grunt-includes
@@ -222,7 +222,7 @@ module.exports = function (grunt) {
 
 
 
-    /** 
+    /**
         Load our Grunt plugins
     **/
     grunt.loadNpmTasks('grunt-contrib-watch');
