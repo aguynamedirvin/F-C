@@ -64,45 +64,86 @@
 
         <!--include "product__card.html"-->
 
-    
+
         <main class="wrap">
-                
+
                 <div class="cart__bag">
-                    <h2>Shopping bag</h2>
-                    
+                    <h2 class="cart__heading">Shopping bag</h2>
+
                     <ul>
-                        
-                        <li>
-                            
-                            <span class="item__thumb">
-                                <img src="assets/images/examples/thumb_1.jpg" width="90" alt="Denim Shirt">
+                        <li class="cart__item">
+                            <span class="cart__item-thumb">
+                                <a href="product.html">
+                                    <img src="assets/images/examples/thumb_1.jpg" width="90" alt="Denim Shirt">
+                                </a>
                             </span>
-                        
-                            <span class="item__details">
+
+                            <span class="cart__item-details">
+                                <h3><a href="product.html">Blue Denim Shirt</a></h3>
+                                <span>Qty. 1</span>
+                                <span>Size: Medium</span>
+                                <a class="cart__item-remove" href="#">Remove</a>
+                            </span>
+
+                            <span class="cart__item-pricing">
+                                <span class="price">$19.99</span>
+                            </span>
+                        </li>
+
+                        <li class="cart__item">
+                            <span class="cart__item-thumb">
+                                <a href="product.html">
+                                    <img src="assets/images/examples/thumb_1.jpg" width="90" alt="Denim Shirt">
+                                </a>
+                            </span>
+
+                            <span class="cart__item-details">
                                 <h3><a href="product.html">Denim Shirt</a></h3>
                                 <span>Qty. 1</span>
                                 <span>Size: Medium</span>
-                                <a href="#">Remove</a>
+                                <a class="cart__item-remove" href="#">Remove</a>
                             </span>
-                            
-                            <span class="item__pricing">
-                                <span class="price">19.99</span>
+
+                            <span class="cart__item-pricing">
+                                <span class="price">$19.99</span>
                             </span>
                         </li>
-                        
-                    </ul>
-                    
+
                 </div>
-                
-                
-                
+
+
+
                 <div class="cart__summary">
-                    <h2>Order summary</h2>
-                    
+                    <h2 class="cart__heading">Order summary</h2>
+
+                    <ul class="cart__summary-details">
+                        <li>
+                            <span class="of">Order total</span>
+                            <span class="cost">$39.98</span>
+                        </li>
+                        <li>
+                            <span class="of">Shipping</span>
+                            <span class="cost">$10</span>
+                        </li>
+                        <li>
+                            <span class="of">Tax</span>
+                            <span class="cost">$4</span>
+                        </li>
+                        <li>
+                            <span class="of">Coupon</span>
+                            <span class="cost">- $10</span>
+                        </li>
+                    </ul>
+
+                    <div class="cart__subtotal">
+                        <div class="subtotal__title">Subtotal</div>
+                        <div class="subtotal__cost">$43.98</div>
+                    </div>
+
                     <button class="btn btn--accent">Checkout</button>
-                    
+
                 </div>
-            
+
         </main>
 
         <!-- Newsletter -->
