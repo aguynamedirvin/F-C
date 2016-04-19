@@ -37,7 +37,8 @@ body
 
 
 #logo,
-#nav-cart-trigger
+#nav-cart-trigger,
+#nav-user-icon
     display: inline-block
     line-height: $header-height
 
@@ -59,13 +60,23 @@ body
 
 /** Navigation Menu Trigger Buttons **/
 #hamburger-menu,
-#nav-cart-trigger
+#nav-cart-trigger,
+#nav-user-icon
     height: 100%
     position: absolute
     top: 0
 
     @include mq($break-medium)
         position: static
+
+#nav-cart-trigger,
+#nav-user-icon
+    width: 50px
+    right: 75px
+    background: no-repeat center center
+    
+    @include mq($break-medium)
+        position: absolute
 
 /** Cart Menu Icon Trigger **/
 #nav-cart-trigger
@@ -77,6 +88,8 @@ body
         position: absolute
         right: $spacing
 
+#nav-user-icon
+    background-image: url('../images/user.svg')
 
 /** Hamburger Menu **/
 #hamburger-menu

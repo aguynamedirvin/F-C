@@ -9,7 +9,9 @@
         margin: 0 0 ($spacing * 2)
 
     &__bag
-        @include span(7.5)
+        @include mq($break-medium)
+            @include span(7.5)
+            margin-bottom: $spacing * 4
 
     // Cart items
     &__item
@@ -51,9 +53,10 @@
 
 
     &__summary
-        border-left: 1px solid $color-alto
-        padding-left: $spacing * 2
-        @include span(4.5 last)
+        @include mq($break-medium)
+            border-left: 1px solid $color-alto
+            padding-left: $spacing * 2
+            @include span(4.5 last)
 
         &-details
             padding: 0 ($spacing * 4)
