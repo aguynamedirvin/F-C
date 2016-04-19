@@ -1,0 +1,42 @@
+Title: Flex Knit V-Neck
+
+----
+
+Brand: Nike
+
+----
+
+Text: 
+
+----
+
+Variants: 
+
+- 
+  name: Flex Knit V-Neck
+  price: "100"
+  sku: ""
+  weight: ""
+  stock: ""
+  options: Small,Medium,Large
+  description: ""
+  sale_price: ""
+  sale_start: ""
+  sale_end: ""
+  sale_codes: ""
+
+----
+
+Noshipping: 0
+
+----
+
+Notax: 0
+
+----
+
+Tags: 
+
+----
+
+Relatedproducts: 

@@ -1,0 +1,70 @@
+Title: Shop
+
+----
+
+Text: 
+
+----
+
+Shipping: 
+
+----
+
+Tax: 
+
+----
+
+Paylater: 
+
+----
+
+Currency-code: USD
+
+----
+
+Currency-symbol: $
+
+----
+
+Currency-position: before
+
+----
+
+Paypal-email: 
+
+----
+
+Paypal-action: sandbox
+
+----
+
+Featured: 
+
+----
+
+Slider: 
+
+----
+
+Discount-codes: 
+
+- 
+  code: FITCLASSY2017
+  kind: percentage
+  amount: "10"
+  minorder: "10"
+  paylater: "0"
+
+----
+
+Notifications: 
+
+----
+
+Main-slider: 
+
+- 
+  title: Shop new styles
+  display_title: 'true'
+  summary: ""
+  image: photo-1447798907885-abee8c7cfaca.jpg

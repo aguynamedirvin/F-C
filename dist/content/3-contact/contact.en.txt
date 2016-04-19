@@ -1,0 +1,41 @@
+Title: Contact
+
+----
+
+Text: 
+
+----
+
+Phone: 9153242342
+
+----
+
+Email: 
+
+----
+
+Location: {"address":"","lat":"","lng":""}
+
+----
+
+Hours: 
+
+----
+
+Slider: 
+
+----
+
+Facebook: http://facebook.com/FC
+
+----
+
+Google-plus: http://plus.gooogle.com/FC
+
+----
+
+Twitter: http://twitter.com/FC
+
+----
+
+Instagram: http://instagram.com/FC
