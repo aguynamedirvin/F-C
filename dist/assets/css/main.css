@@ -162,6 +162,10 @@ main {
   padding: 6rem 0;
 }
 
+.hide {
+  display: none;
+}
+
 /* ------------------------------------
     Header
  ------------------------------------*/
@@ -955,7 +959,8 @@ ul.slick-dots li button:before {
 input[type='text'],
 input[type='email'],
 input[type='password'],
-textarea, .btn {
+textarea,
+select, .btn {
   border-radius: 0;
   border: 1px solid #383838;
   cursor: pointer;
@@ -978,7 +983,8 @@ textarea, .btn {
   input[type='text'],
   input[type='email'],
   input[type='password'],
-  textarea, .btn {
+  textarea,
+  select, .btn {
     width: 30rem;
   }
 }
@@ -986,7 +992,8 @@ textarea, .btn {
 input[type='text'],
 input[type='email'],
 input[type='password'],
-textarea {
+textarea,
+select {
   text-transform: none;
 }
 
@@ -1418,6 +1425,17 @@ textarea:disabled {
   background-color: #dc4e41;
 }
 
+.message {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #000;
+}
+
+.message--error {
+  color: #fff;
+  background: #c36767;
+  border-color: #8c3838;
+}
+
 /* ------------------------------------
     Sections
  ------------------------------------*/
@@ -1716,6 +1734,21 @@ textarea:disabled {
 
 .article__content ul li {
   list-style-type: circle;
+}
+
+@media screen and (min-width: 868px) {
+  .register-box {
+    max-width: 50%;
+    border: 1px solid #D8D8D8;
+    padding: 4.5rem;
+    margin: 0 auto;
+  }
+}
+
+.register-box input,
+.register-box button,
+.register-box select {
+  min-width: 100%;
 }
 
 .logo {

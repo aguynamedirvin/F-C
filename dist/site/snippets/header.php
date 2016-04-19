@@ -37,8 +37,9 @@
 
                 <?= snippet('logo') ?>
 
-                <a href="#" id="hamburger-menu"><span></span></a>
-                <a href="#" id="nav-cart-trigger" class="img-replace">nav-cart</a>
+                <a href="#0" id="hamburger-menu"><span></span></a>
+                <a href="<?= url('account/register') ?>" id="nav-user-icon" class="img-replace">Account</a>
+                <a href="#0" id="nav-cart-trigger" class="img-replace">Cart</a>
 
             </div>
 

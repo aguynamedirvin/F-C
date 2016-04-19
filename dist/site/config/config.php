@@ -1,5 +1,12 @@
 <?php
 
+c::set('debug', true);
+c::set('cache', false);
+
+thumb::$defaults['quality'] = 100;
+thumb::$defaults['upscale'] = true;
+thumb::$defaults['crop']    = true;
+
 /*
 
 ---------------------------------------
@@ -67,6 +74,8 @@ c::set('url', '/');
 */
 
 // c::set('url', 'http://'.$_SERVER['HTTP_HOST']);
+
+c::set('url', '/dist');
 
 
 /*
