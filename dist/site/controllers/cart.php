@@ -26,7 +26,7 @@ return function($site, $pages, $page) {
                 break;
         }
     }
-    
+
     // Add properties to cart items
     $items = $cart->getItems();
     foreach ($items as $item) {
@@ -36,7 +36,7 @@ return function($site, $pages, $page) {
         if (!$img) {
             $item->imgSrc = false;
         } else {
-            $item->imgSrc = thumb($img,['width'=>60, 'height'=>60, 'crop'=>true])->dataUri();
+            $item->imgSrc = thumb($img,['width' => 90, 'height' => 90, 'crop'=>true])->dataUri();
         }
 
         // Max quantity
@@ -94,7 +94,7 @@ return function($site, $pages, $page) {
       $shippingMethod = s::get('shipping');
     } else {
       // Last resort: choose the first shipping method
-      $shippingMethod = array_shift($shippingMethods);      
+      $shippingMethod = array_shift($shippingMethods);
     }
     s::set('shipping',$shippingMethod);
 

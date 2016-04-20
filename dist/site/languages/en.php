@@ -1,6 +1,6 @@
 <?php l::set([
 
-// multiple pages 
+// multiple pages
 
 'username' => 'Username',
 'password' => 'Password',
@@ -148,7 +148,7 @@
 'pay-later' => 'Pay later',
 'empty-cart' => 'Empty cart',
 
-'discount' => 'Discount',
+'discount' => 'Discount code',
 'discount-apply' => 'Apply code',
 
 'no-tax' => 'No tax',

@@ -19,23 +19,17 @@
                         <span class="cart__item-details">
                             <h3>
                                 <a href="<?= url($item->uri) ?>" title="<?= $item->fullTitle() ?>">
-                                    <?php echo $item->name ?>
+                                    <?= $item->name ?>
                                 </a>
                             </h3>
                             <span>Qty. <?= $item->quantity ?></span>
-                            <span>Size: Medium</span>
+                            <!--<span>Size: Medium</span>-->
                             <span>
                                 <form action="" method="post">
                                     <input type="hidden" name="action" value="remove">
-                                    <input type="hidden" name="id" value="<?php echo $item->id ?>">
+                                    <input type="hidden" name="id" value="<?= $item->id ?>">
                                     <button class="cart__item-remove" type="submit">
-                                        <?php
-                                            if ($item->quantity === 1) {
-                                                echo 'Remove'; // x (delete)
-                                            } else {
-                                                echo '&#9660;'; // Down arrow
-                                            }
-                                        ?>
+                                        <?= e($item->quantity === 1, 'Remove', '&#9660;') ?>
                                     </button>
                                 </form>
                             </span>
@@ -53,9 +47,7 @@
                 <?php if ( !$discountAmount > 0 ): ?>
                     <form method="post">
                         <input type="text" name="dc" placeholder="<?= l::get('discount') ?>" />
-                        <button type="submit">
-                            <?= l::get('discount-apply') ?>
-                        </button>
+                        <button class="btn" type="submit"><?= l::get('discount-apply') ?></button>
                     </form>
                 <?php endif ?>
             <?php endif ?>
@@ -89,7 +81,7 @@
                     <span class="cost"><?= '&ndash; ' . formatPrice($discountAmount) ?></span>
                 </li>
                 <?php endif ?>
-                
+
             </ul>
 
             <div class="cart__subtotal">

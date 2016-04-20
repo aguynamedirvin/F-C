@@ -1,19 +1,19 @@
 <?= snippet('header') ?>
 
     <main class="wrap">
-        
+
         <div class="register-box">
-        
+
             <h1 dir="auto"><?= $page->title()->html() ?></h1>
-            
+
             <?= $page->text()->kirbytext()->bidi() ?>
-            
+
             <?php if($register_message): ?>
-            <div class="uk-alert uk-alert-warning">
+            <div class="message message--error">
                 <?= $register_message ?>
             </div>
             <?php endif ?>
-            
+
             <form dir="auto" method="post">
                 <div class="forRobots hide">
                     <label for="subject"><?= l::get('honeypot-label') ?></label>
@@ -40,11 +40,11 @@
                         <?php endforeach ?>
                     </select>
                 </div>
-                <button class="btn" type="submit" name="register"><?= l::get('register') ?></button>        
+                <button class="btn" type="submit" name="register"><?= l::get('register') ?></button>
             </form>
-        
+
         </div>
-        
+
     </main>
 
 <?= snippet('footer') ?>

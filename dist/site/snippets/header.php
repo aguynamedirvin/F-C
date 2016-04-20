@@ -38,8 +38,8 @@
                 <?= snippet('logo') ?>
 
                 <a href="#0" id="hamburger-menu"><span></span></a>
-                <a href="<?= url('account/register') ?>" id="nav-user-icon" class="img-replace">Account</a>
-                <a href="#0" id="nav-cart-trigger" class="img-replace">Cart</a>
+                <a href="<?= e($user = $site->user(), url('shop/orders'), url('account/register'))  ?>" id="nav-user-icon" class="img-replace">Account</a>
+                <a href="<?= url('shop/cart') ?>" id="nav-cart-trigger"></a>
 
             </div>
 

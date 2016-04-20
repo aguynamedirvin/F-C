@@ -1,6 +1,6 @@
 <?php
 
-c::set('debug', true);
+//c::set('debug', true);
 c::set('cache', false);
 
 thumb::$defaults['quality'] = 100;
@@ -74,8 +74,6 @@ c::set('url', '/');
 */
 
 // c::set('url', 'http://'.$_SERVER['HTTP_HOST']);
-
-c::set('url', '/dist');
 
 
 /*
