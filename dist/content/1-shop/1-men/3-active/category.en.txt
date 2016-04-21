@@ -1,9 +1,0 @@
-Title: Active
-
-----
-
-Text: 
-
-----
-
-Slider: 

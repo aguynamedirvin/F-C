@@ -8,6 +8,15 @@ Text:
 
 Shipping: 
 
+- 
+  method: Local Delivery El Paso TX
+  countries: united-states
+  flat: "0"
+  item: ""
+  weight: ""
+  price: ""
+  calculation: low
+
 ----
 
 Tax: 
@@ -30,7 +39,7 @@ Currency-position: before
 
 ----
 
-Paypal-email: 
+Paypal-email: irvinburciaga-facilitator@outlook.com
 
 ----
 
@@ -47,13 +56,6 @@ Slider:
 ----
 
 Discount-codes: 
-
-- 
-  code: FITCLASSY2017
-  kind: percentage
-  amount: "10"
-  minorder: "10"
-  paylater: "0"
 
 ----
 

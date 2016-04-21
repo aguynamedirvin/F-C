@@ -1,11 +1,22 @@
-.register-box
+.login-box
     @include mq($break-medium)
-        max-width: 50%
+        @include span(6)
         border: 1px solid $color-alto
         padding: ($spacing * 3)
-        margin: 0 auto
-    
-    input, 
+        margin: ($spacing * 5) 0
+
+    &--right
+        @include last
+
+    h1
+        text-align: center
+        font-size: 2.4rem
+        margin-bottom: 1.5rem
+
+    a
+        color: $color-grey
+
+    input,
     button,
     select
         min-width: 100%

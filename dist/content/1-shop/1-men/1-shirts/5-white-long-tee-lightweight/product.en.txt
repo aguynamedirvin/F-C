@@ -1,0 +1,42 @@
+Title: White Long Tee (Lightweight)
+
+----
+
+Brand: 
+
+----
+
+Text: > These long tees are made with a light thread of 100% cotton, guaranteed to bring you superior comfort and maximum breathability.
+
+----
+
+Variants: 
+
+- 
+  name: White Long Tee (Lightweight)
+  price: "25"
+  sku: ""
+  weight: ""
+  stock: ""
+  options: Small,Medium,Large
+  description: ""
+  sale_price: ""
+  sale_start: ""
+  sale_end: ""
+  sale_codes: ""
+
+----
+
+Noshipping: 0
+
+----
+
+Notax: 0
+
+----
+
+Tags: 
+
+----
+
+Relatedproducts: 

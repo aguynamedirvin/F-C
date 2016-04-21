@@ -26,5 +26,16 @@ main
     padding: ($spacing * 4) 0
 
 
+@for $i from 1 through 12
+    .col--#{$i}
+        @include span($i no-gutters)
+
+
 .hide
     display: none
+
+.left
+    float: left
+    
+.right
+    float: right

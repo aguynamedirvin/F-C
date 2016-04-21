@@ -1,4 +1,5 @@
 <div class="logo" id="logo">
-    <!--<img src="assets/images/logo.svg" alt="Homepage">-->
-    <a href="<?= $site->url() ?>">F & C</a>
+    <a href="<?= $site->url() ?>" title="<?= $site->title() ?>">
+        <img src="<?= $site->url() . '/assets/images/logo.svg' ?>" alt="<?= $site->title() ?>">
+    </a>
 </div>

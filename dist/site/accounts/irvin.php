@@ -8,6 +8,7 @@ language: en
 role: admin
 history:
   - shop
-  - contact
-  - shop/men/active/college-elite-shootaround
-  - shop/men/active/flex-knit-v-neck
+  - shop/men/shirts/black-long-tee-lightweight
+  - shop/men/shirts/white-long-tee-lightweight
+  - shop/men/shirts/black-tri-blend-t-shirt
+  - shop/men/shirts/white-tri-blend-t-shirt

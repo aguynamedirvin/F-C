@@ -1,8 +1,9 @@
 /** Slider **/
-#main-slider, 
-.slide-container, 
+#main-slider,
+.slide-container,
 .slide
     height: 600px
+    max-height: 600px
     overflow: hidden
 
 .slide
@@ -19,12 +20,12 @@
     text-align: center
     transform: translateY(-50%)
 
-    
+
     @media screen and (min-width: $break-medium)
         .slide-meta
             margin: 0 auto
             max-width: 700px
-    
+
     .title
         color: #FFF
         font-size: 7rem
@@ -124,7 +125,7 @@ ul.slick-dots
 .slick-next
     right: 0
     content: '\f105'
-    
+
 .slick-prev
     left: 0
     content: '\f104'
@@ -141,7 +142,7 @@ ul.slick-dots
     -ms-touch-action: pan-y
     -webkit-tap-highlight-color: transparent
     -webkit-touch-callout: none
-    
+
     user-select: none
 
 .slick-list
@@ -153,7 +154,7 @@ ul.slick-dots
 
     &:focus
         outline: none
-        
+
     &.dragging
         cursor: pointer
         cursor: hand

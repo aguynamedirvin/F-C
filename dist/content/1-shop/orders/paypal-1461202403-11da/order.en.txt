@@ -1,0 +1,45 @@
+Txn-id: paypal-1461202403-11da
+
+----
+
+Txn-date: 1461202403
+
+----
+
+Txn-currency: USD
+
+----
+
+Status: pending
+
+----
+
+Products: Indigo Denim Shirt - indigo-denim-shirt - medium (3)
+
+----
+
+Subtotal: 59.97
+
+----
+
+Discount: 0.00
+
+----
+
+Shipping: 0
+
+----
+
+Shipping-method: TEST SHIPPING
+
+----
+
+Tax: 13.12
+
+----
+
+Payer-id: irvin
+
+----
+
+Payer-email: irvindominguez1@gmail.com

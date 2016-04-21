@@ -124,7 +124,7 @@ h5 {
 /* ------------------------------------
     Grid
  ------------------------------------*/
-.wrap:after, .nav-cart__items li:after, .product:after, .product__thumbnails:after, .section:after, .cart__item:after, .article:after {
+.wrap:after, .nav-cart__items li:after, .product:after, .product__thumbnails:after, .section:after, .cart__item:after, .cart__options:after, .article:after {
   content: '';
   display: table;
   clear: both;
@@ -162,8 +162,78 @@ main {
   padding: 6rem 0;
 }
 
+.col--1 {
+  width: 5.376344086%;
+  float: left;
+}
+
+.col--2 {
+  width: 13.9784946237%;
+  float: left;
+}
+
+.col--3 {
+  width: 22.5806451613%;
+  float: left;
+}
+
+.col--4 {
+  width: 31.1827956989%;
+  float: left;
+}
+
+.col--5 {
+  width: 39.7849462366%;
+  float: left;
+}
+
+.col--6 {
+  width: 48.3870967742%;
+  float: left;
+}
+
+.col--7 {
+  width: 56.9892473118%;
+  float: left;
+}
+
+.col--8 {
+  width: 65.5913978495%;
+  float: left;
+}
+
+.col--9 {
+  width: 74.1935483871%;
+  float: left;
+}
+
+.col--10 {
+  width: 82.7956989247%;
+  float: left;
+}
+
+.col--11 {
+  width: 91.3978494624%;
+  float: left;
+}
+
+.col--12 {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .hide {
   display: none;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 /* ------------------------------------
@@ -222,6 +292,18 @@ body {
   color: #fff;
   transform: scale(0.8);
   line-height: 5rem;
+}
+
+#logo img {
+  height: 40px;
+  margin: 5px 0;
+}
+
+@media screen and (min-width: 868px) {
+  #logo img {
+    height: 50px;
+    margin: 10px;
+  }
 }
 
 @media screen and (min-width: 868px) {
@@ -714,6 +796,7 @@ body {
 .slide-container,
 .slide {
   height: 600px;
+  max-height: 600px;
   overflow: hidden;
 }
 
@@ -997,6 +1080,12 @@ select {
   text-transform: none;
 }
 
+select {
+  background: #fff;
+  border-radius: none;
+  text-transform: uppercase;
+}
+
 textarea {
   min-height: 30rem;
   display: block;
@@ -1252,14 +1341,10 @@ textarea:disabled {
 
 @media screen and (min-width: 868px) {
   .product__select-size {
-    width: 65.5913978495%;
-    float: left;
-    margin-right: 3.2258064516%;
+    min-width: 100%;
   }
-  .product__select-qty {
-    width: 31.1827956989%;
-    float: right;
-    margin-right: 0;
+  .product__select-size select {
+    min-width: 100%;
   }
 }
 
@@ -1430,6 +1515,11 @@ textarea:disabled {
   border: 1px solid #000;
 }
 
+.message--warning {
+  background: #e1e2a5;
+  border-color: #c7ca57;
+}
+
 .message--error {
   color: #fff;
   background: #c36767;
@@ -1542,6 +1632,16 @@ textarea:disabled {
 /* ------------------------------------
     Checkout Page
  ------------------------------------*/
+.cart__empty {
+  text-align: center;
+  margin: 7.5rem 0;
+}
+
+.cart__empty h1 {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+}
+
 .cart__heading {
   border-bottom: 1px solid #D8D8D8;
   padding-bottom: 1.5rem;
@@ -1555,6 +1655,11 @@ textarea:disabled {
     margin-right: 3.2258064516%;
     margin-bottom: 6rem;
   }
+}
+
+.cart__items {
+  border-bottom: 1px solid #D8D8D8;
+  margin-bottom: 3rem;
 }
 
 .cart__item {
@@ -1607,6 +1712,51 @@ textarea:disabled {
 .cart__item-remove:hover {
   color: #B14646;
   border-color: #B14646;
+}
+
+.cart__item .remove-button {
+  display: inline-block;
+}
+
+.cart__item .remove-button form {
+  display: block;
+}
+
+.cart__item .remove-button button {
+  background: none;
+  border: 0;
+  padding: 0;
+  display: inline-block;
+  color: #7F7F7F;
+  font-style: italic;
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+  font-size: 1.6rem;
+  border-bottom: 1px solid #7F7F7F;
+}
+
+.cart__item .remove-button button:hover {
+  cursor: pointer;
+  color: #B14646;
+  border-color: #B14646;
+}
+
+.cart__options {
+  margin-bottom: 4.5rem;
+}
+
+@media screen and (min-width: 868px) {
+  .cart__options .code {
+    width: 60%;
+  }
+  .cart__options .apply {
+    width: 39%;
+  }
+  .cart__options select {
+    min-width: 100%;
+  }
+  .cart__options form:nth-child(3) {
+    float: right;
+  }
 }
 
 @media screen and (min-width: 868px) {
@@ -1737,17 +1887,34 @@ textarea:disabled {
 }
 
 @media screen and (min-width: 868px) {
-  .register-box {
-    max-width: 50%;
+  .login-box {
+    width: 48.3870967742%;
+    float: left;
+    margin-right: 3.2258064516%;
     border: 1px solid #D8D8D8;
     padding: 4.5rem;
-    margin: 0 auto;
+    margin: 7.5rem 0;
   }
 }
 
-.register-box input,
-.register-box button,
-.register-box select {
+.login-box--right {
+  float: right;
+  margin-right: 0;
+}
+
+.login-box h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-box a {
+  color: #7F7F7F;
+}
+
+.login-box input,
+.login-box button,
+.login-box select {
   min-width: 100%;
 }
 

@@ -248,7 +248,7 @@ fields:
       button-text:
         label: Button text
         type: text
-        help: Button will be display if field is not empty
+        help: Button will be displayed if field is filled
       button-link:
         label: Button link
         type: url

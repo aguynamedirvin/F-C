@@ -1,7 +1,10 @@
 <?php
 
 //c::set('debug', true);
-c::set('cache', false);
+//c::set('cache', true);
+
+c::set('panel.info.versions', false);
+c::set('panel.info.license', false);
 
 thumb::$defaults['quality'] = 100;
 thumb::$defaults['upscale'] = true;

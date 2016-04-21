@@ -1,0 +1,33 @@
+Txn-id: paypal-1461193217-22bc
+
+----
+
+Txn-date: 1461193217
+
+----
+
+Txn-currency: USD
+
+----
+
+Status: shipped
+
+----
+
+Products: Indigo Denim Shirt - indigo-denim-shirt - medium (1)
+
+----
+
+Subtotal: 19.99
+
+----
+
+Discount: 0.00
+
+----
+
+Tax: 0.00
+
+----
+
+Encoded-items: a%3A1%3A%7Bi%3A0%3Ba%3A3%3A%7Bs%3A3%3A%22uri%22%3Bs%3A32%3A%22shop%2Fmen%2Fshirts%2Fdark-denim-shirt%22%3Bs%3A7%3A%22variant%22%3Bs%3A18%3A%22indigo-denim-shirt%22%3Bs%3A8%3A%22quantity%22%3Bi%3A1%3B%7D%7D

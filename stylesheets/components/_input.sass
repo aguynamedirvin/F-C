@@ -16,7 +16,7 @@
     text-transform: uppercase
     transition: .3s
     width: 100%
-    font: 
+    font:
         family: $heading-family
         size: 1.6rem
         weight: 300
@@ -31,9 +31,14 @@ input[type='password'],
 textarea,
 select
     @extend %input-defaults
-    
+
     text-transform: none
-    
+
+select
+    background: #fff
+    border-radius: none
+    text-transform: uppercase
+
 textarea
     min-height: 30rem
     display: block

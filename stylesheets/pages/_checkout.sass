@@ -3,6 +3,14 @@
  ------------------------------------*/
 
 .cart
+    &__empty
+        text-align: center
+        margin: ($spacing * 5) 0
+
+        h1
+            font-size: 5rem
+            margin-bottom: $spacing
+
     &__heading
         border-bottom: 1px solid $color-alto
         padding-bottom: $spacing
@@ -14,6 +22,10 @@
             margin-bottom: $spacing * 4
 
     // Cart items
+    &__items
+        border-bottom: 1px solid $color-alto
+        margin-bottom: $spacing * 2
+
     &__item
         margin-bottom: $spacing * 2
         @extend %clearfix
@@ -51,6 +63,43 @@
                 color: $color-apple-blossom
                 border-color: $color-apple-blossom
 
+        .remove-button
+            display: inline-block
+
+            form
+                display: block
+
+            button
+                background: none
+                border: 0
+                padding: 0
+                display: inline-block
+                color: $color-grey
+                font-style: italic
+                font-family: $font-family
+                font-size: 1.6rem
+                border-bottom: 1px solid $color-grey
+
+                &:hover
+                    cursor: pointer
+                    color: $color-apple-blossom
+                    border-color: $color-apple-blossom
+
+    &__options
+        margin-bottom: $spacing * 3
+        @extend %clearfix
+
+        @include mq($break-medium)
+            .code
+                width: 60%
+            .apply
+                width: 39%
+
+            select
+                min-width: 100%
+
+            form:nth-child(3)
+                float: right
 
     &__summary
         @include mq($break-medium)

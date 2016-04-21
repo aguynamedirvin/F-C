@@ -1,4 +1,4 @@
-		<!-- Newsletter -->
+		<!-- Newsletter
 		<section class="section  news-letter">
 		    <div class="news-letter__form">
 		        <h2 class="section__title">Send me exclusive offers</h2>
@@ -7,7 +7,7 @@
 		            <input class="btn  btn--accent" type="submit" value="Sign me up!">
 		        </form>
 		    </div>
-		</section>
+		</section>-->
 
 
 
@@ -16,7 +16,11 @@
 		    <div class="wrap">
 
 		        <div class="site-info">
-		            <div class="logo"><?= $site->title()->html() ?></div>
+					<div class="logo" id="logo">
+					    <a href="<?= $site->url() ?>" title="<?= $site->title() ?>">
+					        <img src="<?= $site->url() . '/assets/images/logo.svg' ?>" alt="<?= $site->title() ?>">
+					    </a>
+					</div>
 
 		            <div class="site-note">&copy; <?= date('Y') ?>. All rights reserved. Crafted with <span class="heart"></span> by <a href="http://squarepixl.com/">SquarePixl.</a></div>
 		        </div>

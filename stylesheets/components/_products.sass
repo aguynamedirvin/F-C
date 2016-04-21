@@ -68,10 +68,13 @@
 
         @include mq($break-medium)
             &-size
-                @include span(8)
+                min-width: 100%
+
+                select
+                    min-width: 100%
 
             &-qty
-                @include span(4 last)
+                //@include span(4 last)
 
     &__info
         border-top: 1px solid $color-alto
@@ -118,7 +121,7 @@
 
             &:hover
                 opacity: .8
-                
+
     &__desc
         margin-top: $spacing
         font-size: 1.8rem

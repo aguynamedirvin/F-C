@@ -24,13 +24,6 @@ fields:
     type: multiselect
     search: true
     options: children
-  logo:
-    label: Site logo
-    type:  selector
-    mode:  single
-    types:
-      - image
-    filter: /^((?!placeholder\.png).)*$/
   placeholder:
     label: Placeholder photo
     help: For products and pages that don't have a photo

@@ -17,7 +17,7 @@ body
         padding-top: $header-height-desktop
 
 
-.site-header 
+.site-header
     background: rgba($header-bg, .97)
     font-family: $heading-family
     height: $header-height
@@ -28,7 +28,7 @@ body
     width: 100%
     z-index: $header-zindex
 
-    @include mq($break-medium) 
+    @include mq($break-medium)
         height: $header-height-desktop
 
     a
@@ -45,11 +45,19 @@ body
     @include mq($break-medium)
         line-height: $header-height-desktop
 
-/** Logo **/ 
+/** Logo **/
 #logo
     color: $main-text
     transform: scale(0.8)
     line-height: $header-height
+
+    img
+        height: 40px
+        margin: 5px 0
+
+        @include mq($break-medium)
+            height: 50px
+            margin: 10px
 
     @include mq($break-medium)
         display: inline-block
@@ -74,7 +82,7 @@ body
     width: 50px
     right: 75px
     background: no-repeat center center
-    
+
     @include mq($break-medium)
         position: absolute
 
@@ -111,7 +119,7 @@ body
         transition: background-color 0.15s
         width: 100%
 
-        &:before, 
+        &:before,
         &:after
             background-color: #fff
             content: ''
@@ -119,11 +127,11 @@ body
             left: 0
             position: absolute
             width: 100%
-            
+
             // Force Hardware Acceleration
             transform: translateZ(0)
             backface-visibility: hidden
-            
+
             transition: transform 0.2s
 
         &:before
